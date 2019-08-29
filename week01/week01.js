@@ -24,7 +24,6 @@ const fns = ['m01.txt', 'm02.txt', 'm03.txt', 'm04.txt', 'm05.txt', 'm06.txt', '
 // console.log(linkPath+fns[2]);
 
 // Use 'i' as the variable for the 'for' loop to iterate through
-// and use 'throw' statement to create a custom error
 
 for (let i = 0; i < urls.length; i++) {
     let url = urls[i];
