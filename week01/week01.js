@@ -6,7 +6,16 @@ var fs = require('fs');
 const path = require('path');
 
 var urls = [
-    'https://parsons.nyc/aa/m01.html', 'https://parsons.nyc/aa/m02.html', 'https://parsons.nyc/aa/m03.html', 'https://parsons.nyc/aa/m04.html', 'https://parsons.nyc/aa/m05.html', 'https://parsons.nyc/aa/m06.html', 'https://parsons.nyc/aa/m07.html', 'https://parsons.nyc/aa/m08.html', 'https://parsons.nyc/aa/m09.html', 'https://parsons.nyc/aa/m10.html'
+    'https://parsons.nyc/aa/m01.html',
+    'https://parsons.nyc/aa/m02.html',
+    'https://parsons.nyc/aa/m03.html',
+    'https://parsons.nyc/aa/m04.html',
+    'https://parsons.nyc/aa/m05.html',
+    'https://parsons.nyc/aa/m06.html',
+    'https://parsons.nyc/aa/m07.html',
+    'https://parsons.nyc/aa/m08.html',
+    'https://parsons.nyc/aa/m09.html',
+    'https://parsons.nyc/aa/m10.html'
 ];
 
 const linkPath = '/home/ec2-user/environment/data/';
