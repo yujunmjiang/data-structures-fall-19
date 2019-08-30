@@ -1,10 +1,10 @@
 # Data Structures (Fall 2019)
 
-**Course Description
+**Course Description**
 
 This course covers the fundamentals of the database, semi-structured data, and unstructured data. Students will gain familiarity with data visualization concepts, techniques, and tools, including acquisition, augmentation, and restructuring; data storage and aggregation; access to parallel and distributed computing; high-volume data, disparate sources, and performance; and streaming data and real time and dynamic queries.
 
-**Weekly Assignment 1
+**Weekly Assignment 1**
 
 1. Using Node.js (in Cloud 9), make a request for each of the ten "Meeting List Agenda" pages for Manhattan. **Important: show the code for all ten requests.** 
 
