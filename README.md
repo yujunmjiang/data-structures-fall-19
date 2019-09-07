@@ -16,3 +16,13 @@ Weeks 7 - 9 | Physical sensors and IoT; data cleaning
 Week 10-11 | Interface design
 Weeks 12 - 14 | Reliability, scalability, maintainability, sustainability; Labs
 Week 15 | Final presentations (video) and reflections (Canvas)
+
+#### Required Reading
+
+*"[Raw Data" Is an Oxymoron](http://a.co/6bZnQzs)*, Lisa Gitelman, 2013. This book is available in the library at the reserve desk.  
+*"[NoSQL and SQL Data Modeling: Bringing Together Data, Semantics, and Software](http://a.co/6v7bJVs)"*, Ted Hills, 2016. This book will be available in the library at the reserve desk.  
+*"[Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems](http://a.co/dbjbtnU)"*, Martin Kleppmann, 2017. This book is available electronically through course reserves.
+
+#### Intellectual Property Rights
+
+The New School (the "university") seeks to encourage creativity and invention among its faculty members and students. In doing so, the University affirms its traditional commitment to the personal ownership by its faculty members and students of Intellectual Property Rights in works they create. The complete policy governing Intellectual Property Rights may be seen on the [university website, on the Provost's page](https://www.newschool.edu/provost/accreditation-policies/).
