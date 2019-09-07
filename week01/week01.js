@@ -1,9 +1,8 @@
 // Yujun Jiang
 // Data Structure Weekly Assignment 01
-// make a request for each of the ten "Meeting List Agenda" pages for Manhattan
+// Make a request for each of the ten "Meeting List Agenda" pages for Manhattan
 
-// Defines a constant reference to a value
-// and change the properties of constant objects
+// Defines a constant reference to a value and change the properties of constant objects
 
 var request = require('request');
 var fs = require('fs');
