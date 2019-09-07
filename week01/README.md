@@ -1,23 +1,3 @@
-## Weekly Assignment 1
-
-1. Using Node.js (in Cloud 9), make a request for each of the ten "Meeting List Agenda" pages for Manhattan. **Important: show the code for all ten requests.**    
-```
-https://parsons.nyc/aa/m01.html  
-https://parsons.nyc/aa/m02.html  
-https://parsons.nyc/aa/m03.html  
-https://parsons.nyc/aa/m04.html  
-https://parsons.nyc/aa/m05.html  
-https://parsons.nyc/aa/m06.html  
-https://parsons.nyc/aa/m07.html  
-https://parsons.nyc/aa/m08.html  
-https://parsons.nyc/aa/m09.html  
-https://parsons.nyc/aa/m10.html   
-``` 
-
-2. Using Node.js: For each of the ten files you requested, save the body as a **text file** to your "local" environment (in AWS Cloud9).
-
-3. Study the HTML structure and tags and begin to think about how you might parse these files to extract relevant data for these AA meetings.
-
 ## Starter code
 
 ```javascript
@@ -34,9 +14,3 @@ request('https://parsons.nyc/thesis-2019/', function(error, response, body){
     else {console.log("Request failed!")}
 });
 ```
-
-## Documentation: 
-
-* [What is `npm`?](https://docs.npmjs.com/getting-started/what-is-npm)  
-* [Node request module](https://www.npmjs.com/package/request)  
-* [Node fs module](https://nodejs.org/api/fs.html)
