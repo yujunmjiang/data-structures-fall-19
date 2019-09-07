@@ -1,4 +1,4 @@
-## Weekly Assignment 02
+## Weekly Assignment 2
 
 1. Using Node.js, read the assigned AA text file that you wrote for last week's assignment. Store the contents of the file in a variable.
 
