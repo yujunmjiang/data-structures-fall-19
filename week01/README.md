@@ -14,3 +14,5 @@ request('https://parsons.nyc/thesis-2019/', function(error, response, body){
     else {console.log("Request failed!")}
 });
 ```
+
+The solution made by [YujunJiang](https://github.com/yujunmjiang) can be found [here](https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week01/week01.js)
