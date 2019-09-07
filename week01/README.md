@@ -1,4 +1,4 @@
-### Weekly Assignment 2
+## Weekly Assignment 2
 
 1. Using Node.js (in Cloud 9), make a request for each of the ten "Meeting List Agenda" pages for Manhattan. **Important: show the code for all ten requests.**    
 ```
@@ -22,7 +22,7 @@ https://parsons.nyc/aa/m10.html
 
 4. Update your GitHub repository with the relevant files: your `js` file and ten `txt` files, plus a `md` file with your documentation. In Canvas, submit the URL of the specific location of this work within your `data-structures` GitHub repository. 
 
-### Starter code
+## Starter code
 
 ```javascript
 // npm install request
@@ -39,7 +39,7 @@ request('https://parsons.nyc/thesis-2019/', function(error, response, body){
 });
 ```
 
-### Documentation: 
+## Documentation: 
 
 * [What is `npm`?](https://docs.npmjs.com/getting-started/what-is-npm)  
 * [Node request module](https://www.npmjs.com/package/request)  
