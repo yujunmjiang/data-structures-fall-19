@@ -4,18 +4,15 @@
 
 This course covers the fundamentals of the database, semi-structured data, and unstructured data. Students will gain familiarity with data visualization concepts, techniques, and tools, including acquisition, augmentation, and restructuring; data storage and aggregation; access to parallel and distributed computing; high-volume data, disparate sources, and performance; and streaming data and real time and dynamic queries.
 
-#### Weekly Assignment 1
+#### Course Overview
 
-1. Using Node.js (in Cloud 9), make a request for each of the ten "Meeting List Agenda" pages for Manhattan. **Important: show the code for all ten requests.** 
-
-2. Using Node.js: For each of the ten files you requested, save the body as a **text file** to your "local" environment (in AWS Cloud9).
-
-3. Study the HTML structure and tags and begin to think about how you might parse these files to extract relevant data for these AA meetings.
-
-4. Update your GitHub repository with the relevant files: your `js` file and ten `txt` files, plus a `md` file with your documentation. In Canvas, submit the URL of the specific location of this work within your `data-structures` GitHub repository. 
-
- Documentation: 
-
-* [What is `npm`?](https://docs.npmjs.com/getting-started/what-is-npm)  
-* [Node request module](https://www.npmjs.com/package/request)  
-* [Node fs module](https://nodejs.org/api/fs.html) 
+Duration | Description
+--- | -------
+Week 1 | Introductions and overview of semester
+Weeks 2 - 4 | Fundamental data structures; modeling structured data
+Week 5 | Modeling semi-structured data
+Week 6 | The Query
+Weeks 7 - 9 | Physical sensors and IoT; data cleaning
+Week 10-11 | Interface design
+Weeks 12 - 14 | Reliability, scalability, maintainability, sustainability; Labs
+Week 15 | Final presentations (video) and reflections (Canvas)
