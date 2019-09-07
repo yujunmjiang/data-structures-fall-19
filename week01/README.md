@@ -1,3 +1,5 @@
+## Weekly Assignment 01
+
 The starter code provided by [Aaron Hill](https://github.com/aaronxhill) can be found [here](https://github.com/visualizedata/data-structures/blob/master/weekly_assignment_01.md)
 
 ```javascript
@@ -15,7 +17,7 @@ request('https://parsons.nyc/thesis-2019/', function(error, response, body){
 });
 ```
 
-The solution made by [YujunJiang](https://github.com/yujunmjiang) can be found [here](https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week01/week01.js)
+## Solution
 
 ```javascript
 // Make a request for each of the ten "Meeting List Agenda" pages for Manhattan
