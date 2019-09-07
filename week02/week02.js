@@ -5,19 +5,13 @@
 var fs = require('fs');
 var cheerio = require('cheerio');
 
-// load the thesis text file into a variable, `dataset`
-// this is the file that we created in the starter code from last week
-var data = fs.readFileSync('/home/ec2-user/environment/week01/data/m03.txt');
+// Load the AA text file from week01 into a variable, `dataset`
+var dataset = fs.readFileSync('/home/ec2-user/environment/week01/data/m03.txt');
 
-// load `data` into a cheerio object
-var $ = cheerio.load(data);
+// Load `dataset` into a cheerio object
+var $ = cheerio.load(dataset);
 
-// print (to the console) required data
-$('td').each(function(i, address) {
-    console.log($(address).text());
-});
-
-// write the project titles to a text file
+// Write the project titles to a text file
 var dataManhattan = '';
 
 $('td').each(function(i, elem) {
@@ -25,7 +19,7 @@ $('td').each(function(i, elem) {
         dataManhattan += ($(elem).text()).trim() + '\n';
     }
     
-// remove all unnecessary content by tag
+// Remove all unnecessary content by tag
     $('b, div, span').remove();
 });
 
