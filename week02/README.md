@@ -34,6 +34,7 @@ fs.writeFileSync('data/thesisTitles.txt', thesisTitles);
 
 ```javascript
 // Using Node.js, read the assigned AA text file and store the contents of the file in a variable
+
 var fs = require('fs');
 var cheerio = require('cheerio');
 
