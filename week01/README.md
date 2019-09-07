@@ -1,4 +1,4 @@
-## Weekly Assignment 2
+## Weekly Assignment 1
 
 1. Using Node.js (in Cloud 9), make a request for each of the ten "Meeting List Agenda" pages for Manhattan. **Important: show the code for all ten requests.**    
 ```
