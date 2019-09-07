@@ -5,6 +5,8 @@
 var request = require('request');
 var fs = require('fs');
 
+// Ten requested pages for Manhattan
+
 var urls = [
     'https://parsons.nyc/aa/m01.html', 
     'https://parsons.nyc/aa/m02.html', 
