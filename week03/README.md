@@ -1,6 +1,6 @@
-## Weekly Assignment 02
+## Weekly Assignment 03
 
-The starter code provided by [Aaron Hill](https://github.com/aaronxhill) can be found [here](https://github.com/visualizedata/data-structures/blob/master/weekly_assignment_02.md)
+The starter code provided by [Aaron Hill](https://github.com/aaronxhill) can be found [here](https://github.com/visualizedata/data-structures/blob/master/weekly_assignment_03.md)
 
 ```javascript
 // npm install cheerio
