@@ -2,10 +2,10 @@
 // Data Structure Weekly Assignment 03
 // Makes a request to the Texas A&M Geoservices Geocoding APIs for each address
 
-var request = require('request'); // npm install request
-var async = require('async'); // npm install async
+var request = require('request');
+var async = require('async');
 var fs = require('fs');
-const dotenv = require('dotenv'); // npm install dotenv
+const dotenv = require('dotenv');
 
 // TAMU api key
 
