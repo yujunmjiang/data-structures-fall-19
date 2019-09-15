@@ -4,10 +4,10 @@ The starter code provided by [Aaron Hill](https://github.com/aaronxhill) can be 
 
 ```javascript
 // dependencies
-var request = require('request'); // npm install request
-var async = require('async'); // npm install async
+var request = require('request');
+var async = require('async');
 var fs = require('fs');
-const dotenv = require('dotenv'); // npm install dotenv
+const dotenv = require('dotenv');
 
 // TAMU api key
 dotenv.config();
