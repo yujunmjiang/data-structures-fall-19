@@ -52,11 +52,6 @@ var dataset = fs.readFileSync('/home/ec2-user/environment/week01/data/m03.txt');
 // load `dataset` into a cheerio object
 var $ = cheerio.load(dataset);
 
-// Print (to the console) required data
-// $('td').each(function(i, address) {
-//     console.log($(address).text());
-// });
-
 // Write the project titles to a text file
 var dataManhattan = [];
 
@@ -65,18 +60,11 @@ $('td').each(function(i, elem) {
     if ($(elem).attr("style") == "border-bottom:1px solid #e3e3e3; width:260px") {
         var thisMeeting = {};
         thisMeeting.streetAddress = $(elem).html().split('<br>')[2].trim().split(',')[0];
-        // if (thisMeeting.streetAddress = ''){
-        //     thisMeeting.streetAddress = '';
-        // }
         thisMeeting.city = "New York";
         thisMeeting.state = "NY";
         dataManhattan.push(thisMeeting);
     }
 });
-    
-// console.log("***************");
-
-// console.log(meetingData);
 
 fs.writeFileSync('../week03/data/data-m03-update.json', JSON.stringify(dataManhattan));
 ```
