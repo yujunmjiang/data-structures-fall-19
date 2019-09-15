@@ -74,28 +74,50 @@ fs.writeFileSync('../week03/data/data-m03-update.json', JSON.stringify(dataManha
 ## Solution
 
 ```javascript
-// Using Node.js, read the assigned AA text file and store the contents of the file in a variable
+// Makes a request to the Texas A&M Geoservices Geocoding APIs for each address
 
+var request = require('request'); // npm install request
+var async = require('async'); // npm install async
 var fs = require('fs');
-var cheerio = require('cheerio');
+const dotenv = require('dotenv'); // npm install dotenv
 
-// Load the AA text file from week01 into a variable, `dataset`
-var dataset = fs.readFileSync('/home/ec2-user/environment/week01/data/m03.txt');
+// TAMU api key
+dotenv.config();
+const apiKey = process.env.TAMU_KEY;
 
-// Load `dataset` into a cheerio object
-var $ = cheerio.load(dataset);
+// Read raw address data from a new JSON file
+var rawData = fs.readFileSync('../week03/data/data-m03-update.json');
+rawData = JSON.parse(rawData);
 
-// Write the project titles to a text file
-var dataManhattan = '';
+// Geocode addresses
+var dataManhattan = [];
+var addresses = [];
 
-// Select tag and use attribute to narrow down the requested data
-$('td').each(function(i, elem) {
-    if ($(elem).attr("style") == "border-bottom:1px solid #e3e3e3; width:260px") {
-        dataManhattan += ($(elem).text()).trim() + '\n';
-    }
+// Add all elements to the end of an array, 'addresses'
+for (var i = 0; i<rawData.length; i++) {
+addresses.push(rawData[i]['streetAddress']);
+}
+
+// 'eachSeries' in the async module iterates over an array and operates on each item in the array in series
+async.eachSeries(addresses, function(value, callback) {
+    var apiRequest = 'https://geoservices.tamu.edu/Services/Geocode/WebService/GeocoderWebServiceHttpNonParsed_V04_01.aspx?';
+    apiRequest += 'streetAddress=' + value.split(' ').join('%20');
+    apiRequest += '&city=New%20York&state=NY&apikey=' + apiKey;
+    apiRequest += '&format=json&version=4.01';
     
-// Remove all unnecessary content by tag
-    $('b, div, span').remove();
+    request(apiRequest, function(err, resp, body) {
+        if (err) {throw err;}
+        else {
+            var tamuGeo = JSON.parse(body);
+            console.log(tamuGeo['FeatureMatchingResultType']);
+            dataManhattan.push(tamuGeo);
+        }
+    });
+    setTimeout(callback, 2000);
+}, function() {
+    fs.writeFileSync('../week03/data/first.json', JSON.stringify(dataManhattan));
+    console.log('*** *** *** *** ***');
+    console.log('Number of meetings in this zone: ');
+    console.log(dataManhattan.length);
 });
-
-fs.writeFileSync('/home/ec2-user/environment/week02/data/data-m03.txt', dataManhattan);
+```
