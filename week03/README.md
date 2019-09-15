@@ -3,31 +3,42 @@
 The starter code provided by [Aaron Hill](https://github.com/aaronxhill) can be found [here](https://github.com/visualizedata/data-structures/blob/master/weekly_assignment_03.md)
 
 ```javascript
-// npm install cheerio
-
+// dependencies
+var request = require('request'); // npm install request
+var async = require('async'); // npm install async
 var fs = require('fs');
-var cheerio = require('cheerio');
+const dotenv = require('dotenv'); // npm install dotenv
 
-// load the thesis text file into a variable, `content`
-// this is the file that we created in the starter code from last week
-var content = fs.readFileSync('data/thesis.txt');
+// TAMU api key
+dotenv.config();
+const apiKey = process.env.TAMU_KEY;
 
-// load `content` into a cheerio object
-var $ = cheerio.load(content);
+// geocode addresses
+var meetingsData = [];
+var addresses = ["63 Fifth Ave", "16 E 16th St", "2 W 13th St"];
 
-// print (to the console) names of thesis students
-$('h3').each(function(i, elem) {
-    console.log($(elem).text());
+// eachSeries in the async module iterates over an array and operates on each item in the array in series
+async.eachSeries(addresses, function(value, callback) {
+    var apiRequest = 'https://geoservices.tamu.edu/Services/Geocode/WebService/GeocoderWebServiceHttpNonParsed_V04_01.aspx?';
+    apiRequest += 'streetAddress=' + value.split(' ').join('%20');
+    apiRequest += '&city=New%20York&state=NY&apikey=' + apiKey;
+    apiRequest += '&format=json&version=4.01';
+    
+    request(apiRequest, function(err, resp, body) {
+        if (err) {throw err;}
+        else {
+            var tamuGeo = JSON.parse(body);
+            console.log(tamuGeo['FeatureMatchingResultType']);
+            meetingsData.push(tamuGeo);
+        }
+    });
+    setTimeout(callback, 2000);
+}, function() {
+    fs.writeFileSync('data/first.json', JSON.stringify(meetingsData));
+    console.log('*** *** *** *** ***');
+    console.log('Number of meetings in this zone: ');
+    console.log(meetingsData.length);
 });
-
-// write the project titles to a text file
-var thesisTitles = ''; // this variable will hold the lines of text
-
-$('.project .title').each(function(i, elem) {
-    thesisTitles += ($(elem).text()).trim() + '\n';
-});
-
-fs.writeFileSync('data/thesisTitles.txt', thesisTitles);
 ```
 
 ## Solution
