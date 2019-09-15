@@ -4,6 +4,7 @@ The starter code provided by [Aaron Hill](https://github.com/aaronxhill) can be 
 
 ```javascript
 // dependencies
+
 var request = require('request'); // npm install request
 var async = require('async'); // npm install async
 var fs = require('fs');
