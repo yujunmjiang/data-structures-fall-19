@@ -35,4 +35,4 @@ Before to build the data mode, I rearranged the AA Meeting's data into six categ
 
 ![illustrative images](./aa-data-model.jpg)
 
-As the concept to make a design for a particular organization's needs, I was inspired by the idea of denormalized data. The data model should focus on four entities: location, time, meeting type, and special interest.
+As the concept to make a design for a particular organization's needs, I was inspired by the idea of denormalized data. The data model should focus on four entities: location, time, meeting, and special interest.
