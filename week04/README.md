@@ -75,3 +75,7 @@ dotenv.config();
 
 db_credentials.password = process.env.AWSRDS_PW;
 ```
+
+**Part Three: Populate the database**
+
+Use the [`pg` module](https://node-postgres.com/) in Node to insert my AA data in the database I created. Modify the starter code to replace the database credentials with my own. It includes three SQL queries that I can modify to accomplish the following tasks in my new database, with the help of the `pg` module in Node.
