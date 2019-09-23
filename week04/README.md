@@ -1,5 +1,4 @@
 ## Weekly Assignment 04
-
 The start code provide by [Aaron Hill](https://github.com/aaronxhill) can be found [here](https://github.com/visualizedata/data-structures/blob/master/weekly_assignment_04.md)
 
 ```javascript
@@ -29,5 +28,4 @@ client.query(thisQuery, (err, res) => {
 ```
 
 ## Data Model
-
 ![illustrative images](./aa-data-model.jpg)
