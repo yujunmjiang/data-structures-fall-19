@@ -27,3 +27,7 @@ client.query(thisQuery, (err, res) => {
     client.end();
 });
 ```
+
+## Data Model
+
+![illustrative images](./aa-data-model.jpg)
