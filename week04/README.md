@@ -33,8 +33,8 @@ client.query(thisQuery, (err, res) => {
 
 Before to build the data mode, I rearranged the AA Meeting's data into six categories: building name, location infomation, meeting title, time information, meeting type, and special interest.
 
-![illustrative images](./aa-data-category.png)
+![illustrative images](./data-category.png)
 
 As the concept to make a design for a particular organization's needs, I was inspired by the idea of denormalized data. The data model should focus on four entities: location, time, meeting, and special interest.
 
-![illustrative images](./aa-data-model.png)
+![illustrative images](./data-model.png)
