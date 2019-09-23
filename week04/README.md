@@ -85,3 +85,13 @@ Use the [`pg` module](https://node-postgres.com/) in Node to insert my AA data i
 ```javascript
 var addressesForDb = [ { address: '7 E 10TH ST, New York, NY', latLong: { lat: 40.6482599, lng: -73.9704806 } }, { address: '155 E 22ND ST, New York, NY', latLong: { lat: 40.7384244, lng: -73.9840055 } }, { address: '61 FOURTH AVE, New York, NY', latLong: { lat: 40.7307719, lng: -73.9903164 } } ];
 ```
+
+```javascript
+var thisQuery = "INSERT INTO aalocations VALUES (E'" + value.address + "', " + value.latLong.lat + ", " + value.latLong.lng + ");";
+```
+
+To check what is in my new database table, query all of its contents.
+
+```javascript
+var thisQuery = "SELECT * FROM aalocations;";
+```
