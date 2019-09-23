@@ -28,7 +28,7 @@ client.query(thisQuery, (err, res) => {
 });
 ```
 
-## Process
+## Solution
 **Part One: Plan**
 
 Before to build the data mode, I rearranged the AA Meeting's data into six categories: building name, location infomation, meeting title, time information, meeting type, and special interest.
