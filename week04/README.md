@@ -28,6 +28,7 @@ client.query(thisQuery, (err, res) => {
 });
 ```
 
-## Data Model
+## Process
+**Part One: Plan**
 
 ![illustrative images](./aa-data-model.jpg)
