@@ -35,6 +35,6 @@ Before to build the data mode, I rearranged the AA Meeting's data into six categ
 
 ![illustrative images](./data-category.png)
 
-As the concept to make a design for a particular organization's needs, I was inspired by the idea of denormalized data. The data model should focus on four entities: location, time, meeting, and special interest.
+As the concept to make a design for a particular organization's needs, I was inspired by the idea of denormalized data. The data model should focus on four entities: location, time, meeting, and special interest. The foreign key (FK) gave an access between each tabel.
 
 ![illustrative images](./data-model.png)
