@@ -38,3 +38,7 @@ Before to build the data mode, I rearranged the AA Meeting's data into six categ
 As the concept to make a design for a particular organization's needs, I was inspired by the idea of denormalized data. The data model should focus on four entities: location, time, meeting, and special interest. The foreign key (FK) gave an access between each tabel.
 
 ![illustrative images](./data-model.png)
+
+**Part Two: Create a table(s) in the database**
+
+Modify the following starter code to replace the database credentials with my own. It includes two SQL sample statements that I can modify to accomplish any of the following tasks in my new database, with the help of the `pg` module in Node.
