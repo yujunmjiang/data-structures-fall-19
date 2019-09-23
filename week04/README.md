@@ -67,3 +67,11 @@ client.query(thisQuery, (err, res) => {
     client.end();
 });
 ```
+
+Important: hide database credentials key using `.env` file.
+```javascript
+const dotenv = require('dotenv');
+dotenv.config();
+
+db_credentials.password = process.env.AWSRDS_PW;
+```
