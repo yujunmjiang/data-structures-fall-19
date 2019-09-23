@@ -42,3 +42,28 @@ As the concept to make a design for a particular organization's needs, I was ins
 **Part Two: Create a table(s) in the database**
 
 Modify the following starter code to replace the database credentials with my own. It includes two SQL sample statements that I can modify to accomplish any of the following tasks in my new database, with the help of the `pg` module in Node.
+
+```javascript
+const { Client } = require('pg');
+
+// AWS RDS POSTGRESQL INSTANCE
+var db_credentials = new Object();
+db_credentials.user = 'yujunmjiang';
+db_credentials.host = 'data-structures.cmqqziujkrxh.us-east-1.rds.amazonaws.com';
+db_credentials.database = 'aa';
+db_credentials.port = 5432;
+
+// Connect to the AWS RDS Postgres database
+const client = new Client(db_credentials);
+client.connect();
+
+// // Sample SQL statement to create a table: 
+var thisQuery = "CREATE TABLE aalocations (address varchar(100), lat double precision, long double precision);";
+// Sample SQL statement to delete a table: 
+// var thisQuery = "DROP TABLE aalocations;"; 
+
+client.query(thisQuery, (err, res) => {
+    console.log(err, res);
+    client.end();
+});
+```
