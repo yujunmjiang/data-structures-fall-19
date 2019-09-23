@@ -72,7 +72,9 @@ Important: hide database credentials key using `.env` file.
 ```javascript
 const dotenv = require('dotenv');
 dotenv.config();
+```
 
+```javascript
 db_credentials.password = process.env.AWSRDS_PW;
 ```
 
