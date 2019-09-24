@@ -1,6 +1,4 @@
 const { Client } = require('pg');
-var async = require('async');
-var fs = require('fs');
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -12,27 +10,16 @@ db_credentials.database = 'aa';
 db_credentials.password = process.env.AWSRDS_PW;
 db_credentials.port = 5432;
 
-// Read raw address data from a new JSON file
-var rawData = fs.readFileSync('../week04/data/first.json');
-addressesForDb = JSON.parse(rawData);
+// Connect to the AWS RDS Postgres database
+const client = new Client(db_credentials);
+client.connect();
 
-var addressesForDb = [];
+// Sample SQL statement to query the entire contents of a table: 
+var thisQuery = "SELECT * FROM locationInfo;";
+// Sample SQL statement to delete a table: 
+// var thisQuery = "DROP TABLE locationInfo;";
 
-async.eachSeries(addressesForDb, function(value, callback) {
-
-    // Connect to the AWS RDS Postgres database
-    const client = new Client(db_credentials);
-    client.connect();
-
-    // Sample SQL statement to query the entire contents of a table: 
-    var thisQuery = "SELECT * FROM aalocations;";
-    // Sample SQL statement to delete a table: 
-    // var thisQuery = "DROP TABLE aalocations;";
-
-    console.log(thisQuery);
-    client.query(thisQuery, (err, res) => {
-        console.log(err, res);
-        client.end();
-    });
-    setTimeout(callback, 1000);
+client.query(thisQuery, (err, res) => {
+    console.log(err, res.rows);
+    client.end();
 });
