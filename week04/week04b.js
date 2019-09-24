@@ -25,9 +25,9 @@ async.eachSeries(addressesForDb, function(value, callback) {
     client.connect();
 
     // Sample SQL statement to create a table: 
-    var thisQuery = "INSERT INTO aalocations VALUES (E'" + value.address + "', " + value.latLon.Latitude + ", " + value.latLon.Longitude + ");";
+    var thisQuery = "INSERT INTO locationInfo VALUES (E'" + value.address + "', " + value.latLon.Latitude + ", " + value.latLon.Longitude + ");";
     // Sample SQL statement to delete a table: 
-    // var thisQuery = "DROP TABLE aalocations;";
+    // var thisQuery = "DROP TABLE locationInfo;";
 
     console.log(thisQuery);
     client.query(thisQuery, (err, res) => {
