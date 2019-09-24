@@ -68,6 +68,9 @@ client.query(thisQuery, (err, res) => {
 });
 ```
 
+Here is my example in `bash`.
+![illustrative images](./sample-1.png)
+
 Important: hide database credentials key using `.env` file.
 ```javascript
 const dotenv = require('dotenv');
