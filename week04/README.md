@@ -18,9 +18,9 @@ const client = new Client(db_credentials);
 client.connect();
 
 // Sample SQL statement to create a table: 
-var thisQuery = "CREATE TABLE aalocations (address varchar(100), lat double precision, long double precision);";
+var thisQuery = "CREATE TABLE locationInfo (address varchar(100), lat double precision, long double precision);";
 // Sample SQL statement to delete a table: 
-// var thisQuery = "DROP TABLE aalocations;"; 
+// var thisQuery = "DROP TABLE locationInfo;"; 
 
 client.query(thisQuery, (err, res) => {
     console.log(err, res);
@@ -58,9 +58,9 @@ const client = new Client(db_credentials);
 client.connect();
 
 // // Sample SQL statement to create a table: 
-var thisQuery = "CREATE TABLE aalocations (address varchar(100), lat double precision, long double precision);";
+var thisQuery = "CREATE TABLE locationInfo (address varchar(100), lat double precision, long double precision);";
 // Sample SQL statement to delete a table: 
-// var thisQuery = "DROP TABLE aalocations;"; 
+// var thisQuery = "DROP TABLE locationInfo;"; 
 
 client.query(thisQuery, (err, res) => {
     console.log(err, res);
@@ -87,11 +87,11 @@ var addressesForDb = [ { address: '7 E 10TH ST, New York, NY', latLong: { lat: 4
 ```
 
 ```javascript
-var thisQuery = "INSERT INTO aalocations VALUES (E'" + value.address + "', " + value.latLong.lat + ", " + value.latLong.lng + ");";
+var thisQuery = "INSERT INTO locationInfo VALUES (E'" + value.address + "', " + value.latLong.lat + ", " + value.latLong.lng + ");";
 ```
 
 To check what is in my new database table, query all of its contents.
 
 ```javascript
-var thisQuery = "SELECT * FROM aalocations;";
+var thisQuery = "SELECT * FROM locationInfo;";
 ```
