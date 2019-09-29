@@ -1,5 +1,5 @@
 // Yujun Jiang
-// Data Structure Weekly Assignment 03
+// Data Structure Weekly Assignment 04
 
 const { Client } = require('pg');
 const dotenv = require('dotenv');
