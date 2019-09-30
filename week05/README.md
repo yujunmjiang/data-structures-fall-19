@@ -28,6 +28,9 @@ This dataset is about all the movies that have been released in 2019 and my pers
 
 **Part Two: Create a table(s) in the database**
 
+Use the [AWS SDK for JavaScript](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/) to work with your DynamoDB table in Node.js. Install with:  
+`npm install aws-sdk`
+
 The following code creates several "Items" destined for DynamoDB (adhering to the expected Item attributes and values), storing them in an array named `blogEntries`.
 
 ```javascript
