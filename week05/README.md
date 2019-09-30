@@ -28,4 +28,37 @@ This dataset is about all the movies that have been released in 2019 and my pers
 
 **Part Two: Create a table(s) in the database**
 
-The following code creates several "Items" destined for DynamoDB (adhering to the expected Item attributes and values), storing them in an array named `blogEntries`. Base on the `blogEntries` array created in the previous step, the AWS SDK to put the first Item into the DynamoDB table. 
+The following code creates several "Items" destined for DynamoDB (adhering to the expected Item attributes and values), storing them in an array named `blogEntries`.
+
+```javascript
+// Define blog entry
+var blogEntries = [];
+
+// Create categories for blog entry
+class BlogEntry {
+  constructor(primaryKey, date, category, title, rating, imdb, watched, ate) {
+    this.pk = {};
+    this.pk.N = primaryKey.toString();
+    this.date = {}; // Partition key
+    this.date.S = new Date(date).toDateString();
+    this.category = {}; // Sort key
+    this.category.S = category;
+    this.title = {};
+    this.title.S = title;
+    this.rating = {};
+    this.rating.S = rating;
+    this.imdb = {};
+    this.imdb.S = imdb;
+    this.watched = {};
+    this.watched.BOOL = watched;
+    if (ate != null) {
+      this.ate = {};
+      this.ate.SS = ate;
+    }
+    this.month = {};
+    this.month.N = new Date(date).getMonth().toString();
+  }
+}
+```
+
+Base on the `blogEntries` array created in the previous step, the AWS SDK to put the first Item into the DynamoDB table. 
