@@ -73,7 +73,7 @@ class BlogEntry {
 
 // Push data into blog entry
 blogEntries.push(new BlogEntry(0, 'January 4 2019', "Action", "Escape Room", "PG-13", "7.5", true, ["Diet Coke"]));
-blogEntries.push(new BlogEntry(1, 'January 18 2019', "Drama", "Glass", "PG-13", "6.7", true, [""]));
+blogEntries.push(new BlogEntry(1, 'January 18 2019', "Drama", "Glass", "PG-13", "6.7", true, ["N/A"]));
 blogEntries.push(new BlogEntry(2, 'February 22 2019', "Animation", "How to Train Your Dragon: The Hidden World", "PG", "6.3", true, ["Diet Coke"]));
 
 console.log(blogEntries);
