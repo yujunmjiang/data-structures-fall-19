@@ -80,3 +80,22 @@ console.log(blogEntries);
 ```
 
 Base on the `blogEntries` array in the previous step, use the AWS SDK to put the first Item into the DynamoDB table. 
+
+```javascript
+// Use 'for' loop to push all the data into blog entry
+var params = {};
+var i = 0;
+for (i = 0; i < blogEntries.length; i++) {
+  params.Item += blogEntries[i];
+}
+params.TableName = "process-blog";
+
+async.eachSeries(blogEntries, function(movie, callback) {
+  params.Item = movie;
+  dynamodb.putItem(params, function(err, data) {
+    if (err) console.log(err, err.stack); // an error occurred
+    else console.log(data); // successful response
+  });
+  setTimeout(callback, 2000);
+});
+```
