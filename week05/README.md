@@ -61,4 +61,4 @@ class BlogEntry {
 }
 ```
 
-Base on the `blogEntries` array that I have created in the previous step, the AWS SDK to put the first Item into the DynamoDB table. 
+Base on the `blogEntries` array in the previous step, use the AWS SDK to put the first Item into the DynamoDB table. 
