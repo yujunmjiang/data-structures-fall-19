@@ -80,6 +80,7 @@ console.log(blogEntries);
 ```
 
 **Part Three: Populate the database**
+
 Base on the `blogEntries` array in the previous step, use the AWS SDK to put the first Item into the DynamoDB table. 
 
 ```javascript
