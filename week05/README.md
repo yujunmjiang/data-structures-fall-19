@@ -79,6 +79,7 @@ blogEntries.push(new BlogEntry(2, 'February 22 2019', "Animation", "How to Train
 console.log(blogEntries);
 ```
 
+**Part Three: Populate the database**
 Base on the `blogEntries` array in the previous step, use the AWS SDK to put the first Item into the DynamoDB table. 
 
 ```javascript
