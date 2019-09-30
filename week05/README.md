@@ -18,3 +18,6 @@ dynamodb.putItem(params, function (err, data) {
   else     console.log(data);           // successful response
 });
 ```
+
+## Solution
+**Part One: Plan**
