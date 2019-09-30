@@ -101,3 +101,7 @@ async.eachSeries(blogEntries, function(movie, callback) {
   setTimeout(callback, 2000);
 });
 ```
+
+Here is my example in `bash`.
+
+![illustrative images](./sample-1.png)
