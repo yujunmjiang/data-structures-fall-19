@@ -21,3 +21,6 @@ dynamodb.putItem(params, function (err, data) {
 
 ## Solution
 **Part One: Plan**
+
+
+![illustrative images](./data-model.png)
