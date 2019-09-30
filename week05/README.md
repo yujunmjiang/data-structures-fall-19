@@ -25,3 +25,5 @@ dynamodb.putItem(params, function (err, data) {
 This dataset is about all the movies that have been released in 2019 and my personal watching history. I choose the release date as `partition key` and movie category as `sort key`. The dataset also include movie title, rating, IMDb score, and two related questions (e.g. Did I watch this movie? / What did I eat in the theatre?)
 
 ![illustrative images](./data-model.png)
+
+**Part Two: Create a table(s) in the database**
