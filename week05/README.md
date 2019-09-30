@@ -27,3 +27,5 @@ This dataset is about all the movies that have been released in 2019 and my pers
 ![illustrative images](./data-model.png)
 
 **Part Two: Create a table(s) in the database**
+
+The following code creates several "Items" destined for DynamoDB (adhering to the expected Item attributes and values), storing them in an array named `blogEntries`. Base on the `blogEntries` array created in the previous step, the AWS SDK to put the first Item into the DynamoDB table. 
