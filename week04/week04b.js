@@ -21,7 +21,7 @@ db_credentials.port = 5432;
 var rawData = fs.readFileSync('../week04/data/first.json');
 addressesForDb = JSON.parse(rawData);
 
-var addressesForDb = [];
+console.log(addressesForDb);
 
 async.eachSeries(addressesForDb, function(value, callback) {
 
