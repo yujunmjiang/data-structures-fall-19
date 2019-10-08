@@ -68,7 +68,7 @@ client.query(thisQuery, (err, res) => {
 });
 ```
 
-Here is my example in `bash`.
+Here is my example in `concole.log()`.
 
 ![illustrative images](./sample-1.png)
 
