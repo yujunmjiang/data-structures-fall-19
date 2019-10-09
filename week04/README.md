@@ -94,12 +94,12 @@ var addressesForDb = [ { address: '7 E 10TH ST, New York, NY', latLong: { lat: 4
 var thisQuery = "INSERT INTO locationInfo VALUES (E'" + value.streetAddress + "', " + value.Geocode.Latitude + ", " + value.Geocode.Longitude + ");";
 ```
 
+Here is my example in `console.log()`.
+
+![illustrative images](./sample-2.png)
+
 To check what is in my new database table, query all of its contents.
 
 ```javascript
 var thisQuery = "SELECT * FROM locationInfo;";
 ```
-
-Here is my example in `console.log()`.
-
-![illustrative images](./sample-2.png)
