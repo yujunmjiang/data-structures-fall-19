@@ -64,11 +64,11 @@ $('td').each(function(i, elem) {
     if ($(elem).attr("style") == "border-bottom:1px solid #e3e3e3; width:260px") {
         dataManhattan += ($(elem).text()).trim() + '\n';
     }
+});
 ```
     
 Remove all unnecessary content by tag `b`, `div`, and `span`.
 
 ```javascript
     $('b, div, span').remove();
-});
 ```
