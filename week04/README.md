@@ -90,10 +90,6 @@ Use the [`pg` module](https://node-postgres.com/) in Node to insert my AA data i
 var addressesForDb = [ { address: '7 E 10TH ST, New York, NY', latLong: { lat: 40.6482599, lng: -73.9704806 } }, { address: '155 E 22ND ST, New York, NY', latLong: { lat: 40.7384244, lng: -73.9840055 } }, { address: '61 FOURTH AVE, New York, NY', latLong: { lat: 40.7307719, lng: -73.9903164 } } ];
 ```
 
-Here is my example in `console.log()`.
-
-![illustrative images](./sample-2.png)
-
 ```javascript
 var thisQuery = "INSERT INTO locationInfo VALUES (E'" + value.streetAddress + "', " + value.Geocode.Latitude + ", " + value.Geocode.Longitude + ");";
 ```
@@ -106,4 +102,4 @@ var thisQuery = "SELECT * FROM locationInfo;";
 
 Here is my example in `console.log()`.
 
-![illustrative images](./sample-3.png)
+![illustrative images](./sample-2.png)
