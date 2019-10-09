@@ -6,7 +6,6 @@ var request = require('request');
 var fs = require('fs');
 
 // Ten requested pages for Manhattan
-
 var urls = [
     'https://parsons.nyc/aa/m01.html', 
     'https://parsons.nyc/aa/m02.html', 
@@ -21,12 +20,10 @@ var urls = [
 ];
 
 // Defines a constant reference to a value and change the properties of constant objects
-
 const linkPath = '/home/ec2-user/environment/week01/data/';
 const fns = ['m01.txt', 'm02.txt', 'm03.txt', 'm04.txt', 'm05.txt', 'm06.txt', 'm07.txt', 'm08.txt', 'm09.txt', 'm10.txt'];
 
 // Use 'i' as the variable for the 'for' loop to iterate through
-
 for (let i = 0; i < urls.length; i++) {
     let url = urls[i];
     let writePath = linkPath + fns[i];
