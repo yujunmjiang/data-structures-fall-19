@@ -32,30 +32,43 @@ fs.writeFileSync('data/thesisTitles.txt', thesisTitles);
 
 ## Solution
 
-```javascript
-// Using Node.js, read the assigned AA text file and store the contents of the file in a variable
+Using `Node.js` read the assigned AA text file and store the contents of the file in a variable.
 
+```javascript
 var fs = require('fs');
 var cheerio = require('cheerio');
+```
 
-// Load the AA text file from week01 into a variable, `dataset`
+Load the AA text file from week01 into a variable called `dataset`.
+
+```javascript
 var dataset = fs.readFileSync('/home/ec2-user/environment/week01/data/m03.txt');
+```
 
-// Load `dataset` into a cheerio object
+Load `dataset` into a cheerio object.
+
+```javascript
 var $ = cheerio.load(dataset);
+```
 
-// Write the project titles to a text file
+Write the project titles to a text file.
+
+```javascript
 var dataManhattan = '';
+```
 
-// Select tag and use attribute to narrow down the requested data
+Select tag `td` and use attribute to narrow down the requested data.
+
+```javascript
 $('td').each(function(i, elem) {
     if ($(elem).attr("style") == "border-bottom:1px solid #e3e3e3; width:260px") {
         dataManhattan += ($(elem).text()).trim() + '\n';
     }
+```
     
-// Remove all unnecessary content by tag
+Remove all unnecessary content by tag `b`, `div`, and `span`.
+
+```javascript
     $('b, div, span').remove();
 });
-
-fs.writeFileSync('/home/ec2-user/environment/week02/data/data-m03.txt', dataManhattan);
 ```
