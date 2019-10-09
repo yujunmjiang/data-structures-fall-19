@@ -50,7 +50,7 @@ const linkPath = '/home/ec2-user/environment/week01/data/';
 const fns = ['m01.txt', 'm02.txt', 'm03.txt', 'm04.txt', 'm05.txt', 'm06.txt', 'm07.txt', 'm08.txt', 'm09.txt', 'm10.txt'];
 ```
 
-Use 'i' as the variable for the 'for' loop to iterate through.
+Use `i` as the variable for the `for` loop to iterate through.
 
 ```javascript
 for (let i = 0; i < urls.length; i++) {
