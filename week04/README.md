@@ -91,7 +91,7 @@ var addressesForDb = [ { address: '7 E 10TH ST, New York, NY', latLong: { lat: 4
 ```
 
 ```javascript
-var thisQuery = "INSERT INTO locationInfo VALUES (E'" + value.address + "', " + value.latLong.lat + ", " + value.latLong.lng + ");";
+var thisQuery = "INSERT INTO locationInfo VALUES (E'" + value.streetAddress + "', " + value.Geocode.Latitude + ", " + value.Geocode.Longitude + ");";
 ```
 
 To check what is in my new database table, query all of its contents.
