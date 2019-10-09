@@ -32,7 +32,7 @@ async.eachSeries(addressesForDb, function(value, callback) {
 
     // Sample SQL statement to create a table: 
     
-    var thisQuery = "INSERT INTO locationInfo VALUES (E'" + value.address + "', " + value.latLon.Latitude + ", " + value.latLon.Longitude + ");";
+    var thisQuery = "INSERT INTO locationInfo VALUES (E'" + value.streetAddress + "', " + value.Geocode.Latitude + ", " + value.Geocode.Longitude + ");";
     // Sample SQL statement to delete a table: 
     // var thisQuery = "DROP TABLE locationInfo;";
 
