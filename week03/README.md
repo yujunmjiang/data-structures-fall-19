@@ -113,13 +113,20 @@ async.eachSeries(addresses, function(value, callback) {
     apiRequest += 'streetAddress=' + value.split(' ').join('%20');
     apiRequest += '&city=New%20York&state=NY&apikey=' + apiKey;
     apiRequest += '&format=json&version=4.01';
-    
+
     request(apiRequest, function(err, resp, body) {
-        if (err) {throw err;}
+        if (err) { throw err; }
         else {
             var tamuGeo = JSON.parse(body);
             console.log(tamuGeo['FeatureMatchingResultType']);
-            dataManhattan.push(tamuGeo);
+            
+            var reduction = {
+                streetAddress: tamuGeo["InputAddress"]["StreetAddress"],
+                City: tamuGeo["InputAddress"]["City"],
+                Geocode: { Latitude: tamuGeo["OutputGeocodes"][0]["OutputGeocode"]["Latitude"], Longitude: tamuGeo["OutputGeocodes"][0]["OutputGeocode"]["Longitude"]}
+            };
+            
+            dataManhattan.push(reduction);
         }
     });
 ```
