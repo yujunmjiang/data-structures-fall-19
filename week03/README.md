@@ -74,32 +74,40 @@ fs.writeFileSync('../week03/data/data-m03-update.json', JSON.stringify(dataManha
 
 ## Solution
 
-```javascript
-// Makes a request to the Texas A&M Geoservices Geocoding APIs for each address
+Makes a request to the Texas A&M Geoservices Geocoding APIs for each address.
 
+```javascript
 var request = require('request');
 var async = require('async');
 var fs = require('fs');
 const dotenv = require('dotenv');
+```
 
-// TAMU api key
+Creat .env file to hide TAMU api key.
+
+```javascript
 dotenv.config();
 const apiKey = process.env.TAMU_KEY;
+```
 
-// Read raw address data from a new JSON file
+Read raw address data from a new JSON file.
+
+```javascript
 var rawData = fs.readFileSync('../week03/data/data-m03-update.json');
 rawData = JSON.parse(rawData);
+```
 
-// Geocode addresses
-var dataManhattan = [];
-var addresses = [];
+Add all elements to the end of an array called `addresses`.
 
-// Add all elements to the end of an array, 'addresses'
+```javascript
 for (var i = 0; i<rawData.length; i++) {
 addresses.push(rawData[i]['streetAddress']);
 }
+```
 
-// 'eachSeries' in the async module iterates over an array and operates on each item in the array in series
+`eachSeries` in the async module iterates over an array and operates on each item in the array in series.
+
+```javascript
 async.eachSeries(addresses, function(value, callback) {
     var apiRequest = 'https://geoservices.tamu.edu/Services/Geocode/WebService/GeocoderWebServiceHttpNonParsed_V04_01.aspx?';
     apiRequest += 'streetAddress=' + value.split(' ').join('%20');
@@ -114,11 +122,4 @@ async.eachSeries(addresses, function(value, callback) {
             dataManhattan.push(tamuGeo);
         }
     });
-    setTimeout(callback, 2000);
-}, function() {
-    fs.writeFileSync('../week03/data/first.json', JSON.stringify(dataManhattan));
-    console.log('*** *** *** *** ***');
-    console.log('Number of meetings in this zone: ');
-    console.log(dataManhattan.length);
-});
 ```
