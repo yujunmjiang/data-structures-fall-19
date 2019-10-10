@@ -1,5 +1,6 @@
 // Yujun Jiang
 // Data Structure Weekly Assignment 06
+// SQL Database for AA Dataset
 
 const { Client } = require('pg');
 const cTable = require('console.table');
@@ -19,7 +20,7 @@ const client = new Client(db_credentials);
 client.connect();
 // console.log(client);
 
-// Sample SQL statement to query meetings on Monday that start on or after 7:00pm: 
+// Sample SQL statement to query address and Geocode from AA dataset 
 var thisQuery = "SELECT address, lat, long FROM locationInfo;";
 
 client.query(thisQuery, (err, res) => {
