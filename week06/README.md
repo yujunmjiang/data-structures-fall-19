@@ -32,6 +32,8 @@ client.query(thisQuery, (err, res) => {
 });
 ```
 
+#### Part One: Write and execute a query for your AA data PostgreSQL
+
 Base on the data model in [weekly assignment 04](https://github.com/yujunmjiang/data-structures-fall-19/tree/master/week04), I used SQL statement to query address and Geocode from AA dataset.
 
 ```javascript
