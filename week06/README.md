@@ -97,6 +97,24 @@ Here is my example on `DynamoDB`.
 
 ![illustrative images](./sample-2.png)
 
+Define key conditions and query values.
+
+```javascript
+var params = {
+    TableName : "watch-history",
+    KeyConditionExpression: "#tp = :categoryName and #dt between :minDate and :maxDate", // the query expression
+    ExpressionAttributeNames: { // name substitution, used for reserved words in DynamoDB
+        "#tp" : "category",
+        "#dt" : "date"
+    },
+    ExpressionAttributeValues: { // the query values
+        ":categoryName": {S: "Action"},
+        ":minDate": {S: new Date("January 1, 2019").toISOString()},
+        ":maxDate": {S: new Date("December 31, 2019").toISOString()}
+    }
+};
+```
+
 Here is my example in `console.log()`.
 
 ![illustrative images](./sample-3.png)
