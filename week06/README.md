@@ -32,6 +32,10 @@ client.query(thisQuery, (err, res) => {
 });
 ```
 
+Here is my example in `console.log()`.
+
+![illustrative images](./sample-1.png)
+
 #### Starter Code for Dear Diary data DynamoDB: 
 
 ```javascript
@@ -66,3 +70,11 @@ dynamodb.query(params, function(err, data) {
     }
 });
 ```
+
+Here is my example on `DynamoDB`.
+
+![illustrative images](./sample-2.png)
+
+Here is my example in `console.log()`.
+
+![illustrative images](./sample-3.png)
