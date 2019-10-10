@@ -82,6 +82,17 @@ Here is my example in `console.log()`.
 
 **Part Two: Write and execute a query for Dear Diary (Movie Watch History) data DynamoDB**
 
+I exchanged `partition key` (release date) and `sort key` (movie category) in [weekly assignment 05](https://github.com/yujunmjiang/data-structures-fall-19/tree/master/week05). Also, I have removed `primary key` (default order by number). The release date string has been updated from `.toDateString()` to ``.toISOString.
+
+```javascript
+// this.pk = {};
+// this.pk.N = primaryKey.toString();
+this.category = {}; // Partition key
+this.category.S = category;
+this.date = {}; // Sort key
+this.date.S = new Date(date).toISOString();
+```
+
 Here is my example on `DynamoDB`.
 
 ![illustrative images](./sample-2.png)
