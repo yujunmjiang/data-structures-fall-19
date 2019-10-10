@@ -1,5 +1,6 @@
 // Yujun Jiang
 // Data Structure Weekly Assignment 06
+// NoSQL Database for Movie Watch History Dataset
 
 // npm install aws-sdk
 var AWS = require('aws-sdk');
