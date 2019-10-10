@@ -32,6 +32,12 @@ client.query(thisQuery, (err, res) => {
 });
 ```
 
+Base on the data model in [weekly assignment 04](https://github.com/yujunmjiang/data-structures-fall-19/tree/master/week04), I used SQL statement to query address and Geocode from AA dataset.
+
+```javascript
+var thisQuery = "SELECT address, lat, long FROM locationInfo;";
+```
+
 Here is my example in `console.log()`.
 
 ![illustrative images](./sample-1.png)
