@@ -97,7 +97,7 @@ Here is my example on `DynamoDB`.
 
 ![illustrative images](./sample-2.png)
 
-Define key conditions and query values.
+Define key conditions and query values. The following syntax queried all the action movies that I have watched in 2019.
 
 ```javascript
 var params = {
