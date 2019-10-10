@@ -13,14 +13,40 @@ var async = require('async');
 var blogEntries = [];
 
 // Create categories for blog entry
+// class BlogEntry {
+//   constructor(primaryKey, date, category, title, rating, imdb, watched, ate) {
+//     this.pk = {};
+//     this.pk.N = primaryKey.toString();
+//     this.date = {}; // Partition key
+//     this.date.S = new Date(date).toDateString();
+//     this.category = {}; // Sort key
+//     this.category.S = category;
+//     this.title = {};
+//     this.title.S = title;
+//     this.rating = {};
+//     this.rating.S = rating;
+//     this.imdb = {};
+//     this.imdb.S = imdb;
+//     this.watched = {};
+//     this.watched.BOOL = watched;
+//     if (ate != null) {
+//       this.ate = {};
+//       this.ate.SS = ate;
+//     }
+//     this.month = {};
+//     this.month.N = new Date(date).getMonth().toString();
+//   }
+// }
+
+// Update for Weekly Assignment 06
 class BlogEntry {
-  constructor(primaryKey, date, category, title, rating, imdb, watched, ate) {
-    this.pk = {};
-    this.pk.N = primaryKey.toString();
-    this.date = {}; // Partition key
-    this.date.S = new Date(date).toDateString();
-    this.category = {}; // Sort key
+  constructor(date, category, title, rating, imdb, watched, ate) {
+    // this.pk = {};
+    // this.pk.N = primaryKey.toString();
+    this.category = {}; // Partition key
     this.category.S = category;
+    this.date = {}; // Sort key
+    this.date.S = new Date(date).toISOString();
     this.title = {};
     this.title.S = title;
     this.rating = {};
@@ -46,18 +72,31 @@ blogEntries.push(new BlogEntry(2, 'February 22 2019', "Animation", "How to Train
 console.log(blogEntries);
 
 // Use 'for' loop to push all the data into blog entry
-var params = {};
-var i = 0;
-for (i = 0; i < blogEntries.length; i++) {
-  params.Item += blogEntries[i];
-}
-params.TableName = "process-blog";
+// var params = {};
+// var i = 0;
+// for (i = 0; i < blogEntries.length; i++) {
+//   params.Item += blogEntries[i];
+// }
+// params.TableName = "process-blog";
 
-async.eachSeries(blogEntries, function(movie, callback) {
-  params.Item = movie;
-  dynamodb.putItem(params, function(err, data) {
+// async.eachSeries(blogEntries, function(movie, callback) {
+//   params.Item = movie;
+//   dynamodb.putItem(params, function(err, data) {
+//     if (err) console.log(err, err.stack); // an error occurred
+//     else console.log(data); // successful response
+//   });
+//   setTimeout(callback, 2000);
+// });
+
+// Update for Weekly Assignment 06
+async.eachSeries(blogEntries, function(value, callback) {
+  var params = {};
+  params.Item = value; 
+  params.TableName = "process-blog";
+  
+  dynamodb.putItem(params, function (err, data) {
     if (err) console.log(err, err.stack); // an error occurred
     else console.log(data); // successful response
   });
-  setTimeout(callback, 2000);
+  setTimeout(callback, 1000); 
 });
