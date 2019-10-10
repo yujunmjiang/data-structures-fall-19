@@ -32,18 +32,6 @@ client.query(thisQuery, (err, res) => {
 });
 ```
 
-#### Part One: Write and execute a query for your AA data PostgreSQL
-
-Base on the data model in [weekly assignment 04](https://github.com/yujunmjiang/data-structures-fall-19/tree/master/week04), I used SQL statement to query address and Geocode from AA dataset.
-
-```javascript
-var thisQuery = "SELECT address, lat, long FROM locationInfo;";
-```
-
-Here is my example in `console.log()`.
-
-![illustrative images](./sample-1.png)
-
 #### Starter Code for Dear Diary data DynamoDB: 
 
 ```javascript
@@ -78,6 +66,21 @@ dynamodb.query(params, function(err, data) {
     }
 });
 ```
+
+## Solution
+**Part One: Write and execute a query for AA data PostgreSQL**
+
+Base on the data model in [weekly assignment 04](https://github.com/yujunmjiang/data-structures-fall-19/tree/master/week04), I used SQL statement to query address and Geocode from AA dataset.
+
+```javascript
+var thisQuery = "SELECT address, lat, long FROM locationInfo;";
+```
+
+Here is my example in `console.log()`.
+
+![illustrative images](./sample-1.png)
+
+**Part Two: Write and execute a query for Dear Diary (Movie Watch History) data DynamoDB**
 
 Here is my example on `DynamoDB`.
 
