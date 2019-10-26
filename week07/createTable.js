@@ -21,7 +21,7 @@ db_credentials.port = 5432;
 const client = new Client(db_credentials);
 client.connect();
 
-// sample SQL statement to create a table: 
+// use SQL statement to create a table called MEETING: 
 var thisQuery = "CREATE TABLE meeting (\
                               meeting_id serial PRIMARY KEY,\
                               meeting_type varchar(10),\
