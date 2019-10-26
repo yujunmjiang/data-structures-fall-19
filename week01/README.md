@@ -43,7 +43,7 @@ var urls = [
 ];
 ```
 
-Defines a constant reference to a value and change the properties of constant objects.
+Define a constant reference to a value and change the properties of constant objects.
 
 ```javascript
 const linkPath = '/home/ec2-user/environment/week01/data/';
