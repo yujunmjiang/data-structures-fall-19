@@ -43,4 +43,19 @@ dotenv.config();
 const apiKey = process.env.TAMU_KEY;
 ```
 
+```javascript
+async.eachSeries(thisZoneAddresses, function(value, callback) {
+        var apiRequest = 'https://geoservices.tamu.edu/Services/Geocode/WebService/GeocoderWebServiceHttpNonParsed_V04_01.aspx?';
+        apiRequest += 'streetAddress=' + value.split(' ').join('%20');
+        apiRequest += '&city=New%20York&state=NY&apikey=' + apiKey;
+        apiRequest += '&format=json&version=4.01';
+
+        request(apiRequest, function(err, resp, body) {
+            if (err) { throw err; }
+            else {
+                var tamuGeo = JSON.parse(body);
+                thisZoneGeocodes.push(tamuGeo);
+            }
+```
+
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week07/image/sample-2.png" width="50%"/>
