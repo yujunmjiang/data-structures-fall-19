@@ -2,7 +2,7 @@ The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be fo
 
 #### Request Data 
 
-Use variable `urls` to request all the data from 10 URLs, and define a constant reference to a value and change the properties of constant objects.
+Use variable `urls` to request all the data from 10 AA meeting URLs, and define a constant reference to a value and change the properties of constant objects.
 
 ```javascript
 const linkPath = '/home/ec2-user/environment/week07/data/';
