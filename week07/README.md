@@ -45,7 +45,7 @@ const apiKey = process.env.TAMU_KEY;
 
 ```javascript
 async.eachSeries(thisZoneAddresses, function(value, callback) {
-        var apiRequest = 'https://geoservices.tamu.edu/Services/Geocode/WebService/GeocoderWebServiceHttpNonParsed_V04_01.aspx?';
+    var apiRequest = 'https://geoservices.tamu.edu/Services/Geocode/WebService/GeocoderWebServiceHttpNonParsed_V04_01.aspx?';
         apiRequest += 'streetAddress=' + value.split(' ').join('%20');
         apiRequest += '&city=New%20York&state=NY&apikey=' + apiKey;
         apiRequest += '&format=json&version=4.01';
