@@ -79,7 +79,7 @@ blogEntries.push(new BlogEntry(2, 'February 22 2019', "Animation", "How to Train
 console.log(blogEntries);
 ```
 
-Here is my example in `bash`.
+Here is my example in `console.log()`.
 
 ![illustrative images](./sample-1.png)
 
