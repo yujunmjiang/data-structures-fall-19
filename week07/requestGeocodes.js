@@ -30,9 +30,9 @@ async.eachSeries(mtgs, function(ele, callback) {
     
     async.eachSeries(thisZoneAddresses, function(value, callback) {
         var apiRequest = 'https://geoservices.tamu.edu/Services/Geocode/WebService/GeocoderWebServiceHttpNonParsed_V04_01.aspx?';
-        apiRequest += 'streetAddress=' + value.split(' ').join('%20');
-        apiRequest += '&city=New%20York&state=NY&apikey=' + apiKey;
-        apiRequest += '&format=json&version=4.01';
+            apiRequest += 'streetAddress=' + value.split(' ').join('%20');
+            apiRequest += '&city=New%20York&state=NY&apikey=' + apiKey;
+            apiRequest += '&format=json&version=4.01';
 
         request(apiRequest, function(err, resp, body) {
             if (err) { throw err; }
