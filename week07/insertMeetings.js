@@ -1,5 +1,5 @@
 // Yujun Jiang
-// Data Structure Weekly Assignment 07 (Pt. 04-b)
+// Data Structure Weekly Assignment 07 (insert meetings)
 // Insert all the meetings in Manhattan to the table on RDS Postgres
 
 const { Client } = require('pg');
