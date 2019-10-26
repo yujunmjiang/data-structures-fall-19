@@ -52,12 +52,12 @@ async.eachSeries(thisZoneAddresses, function(value, callback) {
         apiRequest += '&city=New%20York&state=NY&apikey=' + apiKey;
         apiRequest += '&format=json&version=4.01';
 
-        request(apiRequest, function(err, resp, body) {
-            if (err) { throw err; }
-            else {
-                var tamuGeo = JSON.parse(body);
-                thisZoneGeocodes.push(tamuGeo);
-            }
+    request(apiRequest, function(err, resp, body) {
+        if (err) { throw err; }
+        else {
+            var tamuGeo = JSON.parse(body);
+            thisZoneGeocodes.push(tamuGeo);
+        }
 ```
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week07/image/sample-2.png" width="50%"/>
