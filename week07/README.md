@@ -36,7 +36,7 @@ Format the file array by the following structure.
 #### Request Geocodes
 
 
-Make a request to the [Texas A&M Geoservices Geocoding APIs](https://geoservices.tamu.edu/) for each address and create `.env` file to hide TAMU api key.
+Create `.env` file to hide TAMU api key and make a request to the [Texas A&M Geoservices Geocoding APIs](https://geoservices.tamu.edu/) for each address.
 
 ```javascript
 dotenv.config();
