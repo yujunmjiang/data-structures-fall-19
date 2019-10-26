@@ -34,3 +34,11 @@ Format the file array by the following structure.
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week07/image/sample-1.png" width="50%"/>
 
 #### Request Geocodes
+
+
+Make a request to the [Texas A&M Geoservices Geocoding APIs](https://geoservices.tamu.edu/) for each address and create `.env` file to hide TAMU api key.
+
+```javascript
+dotenv.config();
+const apiKey = process.env.TAMU_KEY;
+```
