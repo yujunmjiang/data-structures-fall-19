@@ -75,6 +75,4 @@ for(var i = 0; i < addressesAllZone.length; i++) {
     }
 ```
 
-Here is my example from one of the AA meeting data in `console.log()`.
-
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week07/image/sample-3.png" width="50%"/>
