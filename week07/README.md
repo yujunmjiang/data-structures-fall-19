@@ -24,3 +24,5 @@ for (var i = 1; i < 11; i++) {
     }
 }
 ```
+
+Format file array by the following structure and a new array called "meetings".
