@@ -35,7 +35,6 @@ Format the file array by the following structure.
 
 #### Request Geocodes
 
-
 Create `.env` file to hide TAMU api key.
 
 ```javascript
@@ -61,3 +60,8 @@ async.eachSeries(thisZoneAddresses, function(value, callback) {
 ```
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week07/image/sample-2.png" width="50%"/>
+
+#### Merge Data
+Merge all the addresses and geocodes into new JSON files.
+Here is my example in `console.log()`.
+
