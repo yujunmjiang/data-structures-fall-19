@@ -62,6 +62,19 @@ async.eachSeries(thisZoneAddresses, function(value, callback) {
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week07/image/sample-2.png" width="50%"/>
 
 #### Merge Data
-Merge all the addresses and geocodes into new JSON files. Here is my example from one of merged AA meeting data in `console.log()`.
+
+Use `for` loop to merge all the addresses and geocodes into new JSON files. 
+
+```javascript
+for(var i = 0; i < addressesAllZone.length; i++) {
+    var thisZoneData = addressesAllZone[i];
+    var thisZoneGroups = thisZoneData.groups;
+    for(var j = 0; j < thisZoneGroups.length; j++) {
+        thisZoneGroups[j].lat = geocodesAllZone[i][j].OutputGeocodes[0].OutputGeocode.Latitude;
+        thisZoneGroups[j].lng = geocodesAllZone[i][j].OutputGeocodes[0].OutputGeocode.Longitude;
+    }
+```
+
+Here is my example from one of the AA meeting data in `console.log()`.
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week07/image/sample-3.png" width="50%"/>
