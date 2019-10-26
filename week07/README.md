@@ -75,7 +75,10 @@ for(var i = 0; i < addressesAllZone.length; i++) {
     }
 ```
 
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week07/image/sample-3.png" width="50%"/>
+
 #### Create Table
 
+Use SQL statement to create a table called `meeting` with headers such us meeting_id, group_id, zone_id, address, geocode, etc.
+
 #### Insert Data
-<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week07/image/sample-3.png" width="50%"/>
