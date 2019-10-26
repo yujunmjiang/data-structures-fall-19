@@ -82,7 +82,9 @@ for(var i = 0; i < addressesAllZone.length; i++) {
 Use SQL statement to create a table called `meeting` with headers such us meeting_id, group_id, zone_id, address, zip, latitude, longitude, etc.
 
 ```javascript
-var thisQuery = "CREATE TABLE meeting ();";
+var thisQuery = "CREATE TABLE meeting (
+                // add headers here
+                              );";
 ```
 
 
