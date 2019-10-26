@@ -42,3 +42,5 @@ Make a request to the [Texas A&M Geoservices Geocoding APIs](https://geoservices
 dotenv.config();
 const apiKey = process.env.TAMU_KEY;
 ```
+
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week07/image/sample-2.png" width="50%"/>
