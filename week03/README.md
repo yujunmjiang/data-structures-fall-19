@@ -74,7 +74,7 @@ fs.writeFileSync('../week03/data/data-m03-update.json', JSON.stringify(dataManha
 
 ## Solution
 
-Make request to the Texas A&M Geoservices Geocoding APIs for each address.
+Make a request to the Texas A&M Geoservices Geocoding APIs for each address.
 
 ```javascript
 var request = require('request');
