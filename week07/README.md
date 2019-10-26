@@ -75,4 +75,7 @@ for(var i = 0; i < addressesAllZone.length; i++) {
     }
 ```
 
+#### Create Table
+
+#### Insert Data
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week07/image/sample-3.png" width="50%"/>
