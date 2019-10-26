@@ -74,7 +74,7 @@ fs.writeFileSync('../week03/data/data-m03-update.json', JSON.stringify(dataManha
 
 ## Solution
 
-Makes a request to the Texas A&M Geoservices Geocoding APIs for each address.
+Make request to the Texas A&M Geoservices Geocoding APIs for each address.
 
 ```javascript
 var request = require('request');
@@ -83,7 +83,7 @@ var fs = require('fs');
 const dotenv = require('dotenv');
 ```
 
-Creat .env file to hide TAMU api key.
+Create `.env` file to hide TAMU api key.
 
 ```javascript
 dotenv.config();
