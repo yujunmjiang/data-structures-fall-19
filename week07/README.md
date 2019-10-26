@@ -30,3 +30,5 @@ Format the file array by the following structure.
 ```javascript
 [{zone: 1, groups:[]}, {zone: 2, groups:[]}, ... {zone: 10, groups:[]}]
 ```
+
+![illustrative images](./image/sample-1.png)
