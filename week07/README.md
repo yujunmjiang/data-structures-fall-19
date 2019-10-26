@@ -31,4 +31,4 @@ Format the file array by the following structure.
 [{zone: 1, groups:[]}, {zone: 2, groups:[]}, ... {zone: 10, groups:[]}]
 ```
 
-![illustrative images](./image/sample-1.png)
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week07/image/sample-1.png" width="50%"/>
