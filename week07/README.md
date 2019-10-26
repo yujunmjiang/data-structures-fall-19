@@ -83,7 +83,13 @@ Use SQL statement to create a table called `meeting` with headers such us meetin
 
 ```javascript
 var thisQuery = "CREATE TABLE meeting (
-                // add headers here
+                              meeting_id serial PRIMARY KEY,\
+                              group_id integer REFERENCES groups (group_id),\
+                              zone_id integer REFERENCES zone (zone_id),\
+                              address varchar,\
+                              zip varchar(10),\
+                              lat double precision,\
+                              lng double precision,\
                               );";
 ```
 
