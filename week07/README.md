@@ -11,7 +11,7 @@ const fns = ['m01.txt', 'm02.txt', 'm03.txt', 'm04.txt', 'm05.txt', 'm06.txt', '
 
 #### Parse Data
 
-Use `for` loop to add 10 AA meeting text files a file array.
+Use `for` loop to add 10 AA meeting text files to file array.
 
 ```javascript
 var file = [];
