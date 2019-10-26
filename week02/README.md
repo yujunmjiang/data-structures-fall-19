@@ -32,7 +32,7 @@ fs.writeFileSync('data/thesisTitles.txt', thesisTitles);
 
 ## Solution
 
-Using `Node.js` read the assigned AA text file and store the contents of the file in a variable.
+Use `Node.js` to read the assigned AA text file and store the contents of the file in a variable.
 
 ```javascript
 var fs = require('fs');
