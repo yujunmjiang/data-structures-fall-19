@@ -63,5 +63,5 @@ async.eachSeries(thisZoneAddresses, function(value, callback) {
 
 #### Merge Data
 Merge all the addresses and geocodes into new JSON files.
-Here is my example in `console.log()`.
 
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week07/image/sample-3.png" width="50%"/>
