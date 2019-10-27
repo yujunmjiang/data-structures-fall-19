@@ -14,5 +14,6 @@ The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be fo
 
 #### Part One
 
-- Set up my temperature sensor (or other sensor(s) for different kinf of data), making appropriate connections to the Photon.  - In the [Web IDE](https://build.particle.io), copy and modify the [starter code](https://github.com/visualizedata/data-structures/tree/master/weekly_assignment_08) for my sensor. IMPORTANT: must include all three starter code files in the Web IDE project for this micro controller.   
-3. In the Web IDE, set up a **single variable** that will be accessible with [Particle Cloud API](https://docs.particle.io/reference/api/). [NOTE: If working with multiple sensors, the variable must return a string of valid JSON [[tutorial here](https://community.particle.io/t/using-spark-publish-with-simple-json-data/3469)] that includes the values of my sensors.]
+- Set up my temperature sensor (or other sensor(s) for different kinf of data) and make connections to the Photon.
+- In the [Web IDE](https://build.particle.io), copy and modify the [starter code](https://github.com/visualizedata/data-structures/tree/master/weekly_assignment_08) for my sensor. IMPORTANT: must include all three starter code files in the Web IDE project for this micro controller.   
+- In the Web IDE, set up a **single variable** that will be accessible with [Particle Cloud API](https://docs.particle.io/reference/api/). [NOTE: If working with multiple sensors, the variable must return a string of valid JSON [[tutorial here](https://community.particle.io/t/using-spark-publish-with-simple-json-data/3469)] that includes the values of my sensors.]
