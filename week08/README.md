@@ -18,6 +18,6 @@ The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be fo
 - In the [Web IDE](https://build.particle.io), copy and modify the [starter code](https://github.com/visualizedata/data-structures/tree/master/weekly_assignment_08) for my sensor.
 - In the Web IDE, set up a **single variable** that will be accessible with [Particle Cloud API](https://docs.particle.io/reference/api/). [NOTE: If working with multiple sensors, the variable must return a string of valid JSON [[tutorial here](https://community.particle.io/t/using-spark-publish-with-simple-json-data/3469)] that includes the values of the sensors.]
 
-<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week08/image/sample-2.png" width="50%"/>
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week08/image/sample-2.png">
 
 #### Part Two
