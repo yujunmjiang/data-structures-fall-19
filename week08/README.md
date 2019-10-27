@@ -21,3 +21,9 @@ The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be fo
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week08/image/sample-2.png">
 
 #### Part Two
+
+Use the following example to make a request:
+- Device ID is `0123456789abcdef`  
+- Your access token is `123412341234`  
+- Your particle variable is `analogvalue`  
+- The URL: `"https://api.particle.io/v1/devices/0123456789abcdef/analogvalue?access_token=123412341234"`
