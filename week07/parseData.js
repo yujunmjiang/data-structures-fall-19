@@ -1,6 +1,6 @@
 // Yujun Jiang
 // Data Structure Weekly Assignment 07 (parse data)
-// Using Node.js, read the assigned AA text file and store the contents of the file in a variable
+// Use Node.js to read the assigned AA text files and store the contents of the file in a variable
 
 var fs = require('fs');
 var cheerio = require('cheerio');
