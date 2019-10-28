@@ -59,7 +59,7 @@ async function insertMeeting() {
             const groupId = await getGroupId(group.group.trim());
             console.log("groupId:", groupId);
             
-            const groupLocation = group.locations;
+            const groupBuilding = group.building;
             const groupAddress = group.address;
             const groupCity = group.city;
             const groupState = group.state;
@@ -84,7 +84,7 @@ async function insertMeeting() {
                     groupMeetingType,
                     groupId,
                     zoneId,
-                    groupLocation,
+                    groupBuilding,
                     groupAddress,
                     groupZip,
                     groupCity,
