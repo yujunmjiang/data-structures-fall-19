@@ -31,3 +31,9 @@ Use the following steps to make a request:
 Here is my result:
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week08/image/sample-3.png">
+
+#### Part Three
+
+Interface design to the data you will be collecting with the temperature sensor.
+
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week08/image/sample-3.png">
