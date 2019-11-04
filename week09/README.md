@@ -15,3 +15,16 @@ Then, initialize a configuration file with:
 `pm2 init`
 
 The initialization creates a configuration file to specify the details of the ecosystem for my script (such as script name and environment variables). The default configuration file is named `ecosystem.config.js` and it will look like [this](https://github.com/visualizedata/data-structures/blob/master/weekly_assignment_09/ecosystem.config.js). 
+
+#### app.js
+
+Instead of running the file with the usual `node app.js`, I will use PM2 to begin running it in the background:  
+`pm2 start ecosystem.config.js`
+
+Check its status with:  
+`pm2 list`
+
+Stop it with:  
+`pm2 stop 0`
+
+#### tempData.js
