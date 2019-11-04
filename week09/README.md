@@ -36,4 +36,9 @@ Check its status with:
 Stop it with:  
 `pm2 stop 0`
 
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week09/image/sample-2.png" width="50%"/>
+
 #### tempData.js
+
+
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week09/image/sample-3.png" width="50%"/>
