@@ -38,7 +38,8 @@ Stop it with:
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week09/image/sample-2.png" width="50%"/>
 
-#### tempData.js
+#### Check my work
 
+To check on my database periodically to ensure that sensor values are recording as expected, use [`tempData.js`](https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week09/tempData.js).
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week09/image/sample-3.png" width="50%"/>
