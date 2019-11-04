@@ -18,6 +18,15 @@ The initialization creates a configuration file to specify the details of the ec
 
 #### app.js
 
+Add Photon details to the `.env` file.
+
+```javascript
+var device_id = process.env.PHOTON_ID;
+var access_token = process.env.PHOTON_TOKEN;
+var particle_variable = 'tempsensor';
+var device_url = 'https://api.particle.io/v1/devices/' + device_id + '/' + particle_variable + '?access_token=' + access_token;
+```
+
 Instead of running the file with the usual `node app.js`, I will use PM2 to begin running it in the background:  
 `pm2 start ecosystem.config.js`
 
