@@ -1,3 +1,7 @@
+// Yujun Jiang
+// Data Structure Weekly Assignment 09
+// Create an application for the temperature data collected by sencor
+
 var request = require('request');
 const { Client } = require('pg');
 const dotenv = require('dotenv').config();
