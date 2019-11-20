@@ -1,3 +1,7 @@
+// Yujun Jiang
+// Data Structure Weekly Assignment 09
+// Query teperature data from the Postgres SQL database
+
 const { Client } = require('pg');
 const cTable = require('console.table');
 const dotenv = require('dotenv').config();
