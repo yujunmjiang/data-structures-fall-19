@@ -1,3 +1,7 @@
+// Yujun Jiang
+// Data Structure Weekly Assignment 09
+// Setup for the temperature data table in Postgres SQL database
+
 const { Client } = require('pg');
 const dotenv = require('dotenv').config();
 
