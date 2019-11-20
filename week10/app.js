@@ -1,3 +1,7 @@
+// Yujun Jiang
+// Data Structure Weekly Assignment 10
+// Create an application for all the data collected and parsed base on the weekly assignments
+
 var express = require('express'), // npm install express
     app = express();
 
