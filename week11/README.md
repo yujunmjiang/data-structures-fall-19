@@ -19,7 +19,7 @@ The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be fo
 - No location pin on the map before type any date.
 
 #### What assumptions are you making about the user?
-- New Yorker need a time and location based meeting map to make the best schedule in their fast-paced life.
+- Users need a time and location based meeting map to make the best schedule for their fast-paced life in New York.
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week11/image/sample-2.png">
 
@@ -47,10 +47,10 @@ The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be fo
 - Users can type a specific date range to review the temperature record base on each date (X-axis) and hourly change (Y-axis).
 
 #### For that mapping, what needs to be done to the data? Be specific and clear. Will it require filtering, aggregation, restructuring, and/or something else? How will this be done?
-- Add week day as filter to search meeting information (e.g. day1, day2, day3...)
+- Combine/remove some raw data that has been recorded in each 5 minute previously.
 
 #### What is the default view (if any)?
 - No location pin on the map before type any date.
 
 #### What assumptions are you making about the user?
-- New Yorker need a time and location based meeting map to make the best schedule in their fast-paced life.
+- A recent (and updated) local temperature record will allow users to make a prediction.
