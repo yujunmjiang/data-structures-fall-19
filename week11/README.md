@@ -4,7 +4,6 @@ The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be fo
 
 #### Interface Design
 
-Sketch 01
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week11/image/sample-1.png">
 
 #### What will the visualization look like? Will it be interactive? If so, how?
@@ -22,7 +21,6 @@ Sketch 01
 #### What assumptions are you making about the user?
 - New Yorker need a time and location based meeting map to make the best schedule in their fast-paced life.
 
-Sketch 02
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week11/image/sample-2.png">
 
 * What will the visualization look like? Will it be interactive? If so, how?   
@@ -31,7 +29,6 @@ Sketch 02
 * What is the default view (if any)?  
 * What assumptions are you making about the user?  
 
-Sketch 03
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week11/image/sample-3.png">
 
 * What will the visualization look like? Will it be interactive? If so, how?   
