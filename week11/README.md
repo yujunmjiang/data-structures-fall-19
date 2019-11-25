@@ -5,13 +5,10 @@ The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be fo
 #### Interface Design
 
 Interface 01
-
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week11/image/sample-1.png">
 
 Interface 02
-
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week11/image/sample-2.png">
 
 Interface 03
-
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week11/image/sample-3.png">
