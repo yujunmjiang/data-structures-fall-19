@@ -21,4 +21,4 @@ After I ran my index page on AWS Could9, here is an example:
 
 #### Project Pages
 
-One the project page (e.g. )
+One the project page (e.g. temperature sensor data), visitos can check both queried and visualized data by two different links.
