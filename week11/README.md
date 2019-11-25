@@ -7,8 +7,8 @@ The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be fo
 Sketch 01
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week11/image/sample-1.png">
 
-* What will the visualization look like? Will it be interactive? If so, how?
-* Users can type a specific date range to search any meeting information that they need in Manhattan area.
+- What will the visualization look like? Will it be interactive? If so, how?
+Users can type a specific date range to search any meeting information that they need in Manhattan area.
 
 * How will the data need to be mapped to the visual elements?
 * The data (showing as text) will be mapped base on latitude and longitude on a map.
