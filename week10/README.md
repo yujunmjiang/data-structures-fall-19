@@ -17,4 +17,4 @@ app.get('/', function(req, res) {
 
 After I ran my index page on AWS Could9, here is an example:
 
-<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week10/img/sample-1.png" width="50%"/>
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week10/img/sample-1.png">
