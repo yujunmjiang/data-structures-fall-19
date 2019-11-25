@@ -2,7 +2,7 @@
 
 The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be found [here](https://github.com/visualizedata/data-structures/tree/master/weekly_assignment_10)
 
-#### Index
+#### Index Page
 
 On the index page, I created three links by HTML5 that can navigate visitors to each project.
 
@@ -19,4 +19,6 @@ After I ran my index page on AWS Could9, here is an example:
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week10/image/sample-1.png" width="50%"/>
 
-#### Project Page
+#### Project Pages
+
+One the project page (e.g. )
