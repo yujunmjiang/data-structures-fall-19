@@ -15,10 +15,6 @@ app.get('/', function(req, res) {
 });
 ```
 
-After I ran my index page on AWS Could9, here is an example:
-
-<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week10/image/sample-1.png" width="50%"/>
-
 #### Project Pages
 
 One the project page (e.g. temperature sensor data), visitos can check both queried and visualized data by two different links.
@@ -64,10 +60,9 @@ app.get('/ts/ts-data.html', function(req, res) {
 });
 ```
 
-Here are examples:
+Here is an example of queried temperature data:
 
-<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week10/image/sample-2.png" width="50%"/>
-<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week10/image/sample-3.png" width="50%"/>
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week10/image/sample-3.png">
 
 #### Data Structures Apps
 Please check my running appliations by this address: http://34.228.80.227:8080/
