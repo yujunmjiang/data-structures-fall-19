@@ -17,7 +17,7 @@ var params = {
         "#dt" : "date"
     },
     ExpressionAttributeValues: { // the query values
-        ":categoryName": {S: "Action"},
+        ":categoryName": {S: "Movie"},
         ":minDate": {S: new Date("January 1, 2019").toISOString()},
         ":maxDate": {S: new Date("December 31, 2019").toISOString()}
     }
