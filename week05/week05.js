@@ -47,6 +47,8 @@ class BlogEntry {
     this.category.S = category;
     this.date = {}; // Sort key
     this.date.S = new Date(date).toISOString();
+    this.type = {};
+    this.type.S = type; 
     this.title = {};
     this.title.S = title;
     this.rating = {};
