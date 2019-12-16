@@ -2,7 +2,7 @@
 
 The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be found [here](https://github.com/visualizedata/data-structures/blob/master/final_assignment_1.md)
 
-#### Data Parsing
+#### Assumptions
 
 The ten "Meeting List Agenda" pages for Manhattan are available at:  
 ```
