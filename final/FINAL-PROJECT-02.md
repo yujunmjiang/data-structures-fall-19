@@ -52,9 +52,9 @@ This dataset is about all the movies that have been released in 2019 and my pers
 
 #### Visual Design
 
-For the visualization of AA meeting, I use [Mapbox](https://www.mapbox.com/) and [Leaflet.js](https://leafletjs.com/) to build an interactive map with a filter of the zip code base on ten areas that have neen defined by [New York State Department of Health](https://www.health.ny.gov/statistics/cancer/registry/appendix/neighborhoods.htm) in Manhattan.
+For the visualization of my movie watch history blog, I kept some important information such us movie title, type, rating, and IMDb score. I will continue to work on the rest of part includes movie poster, description, and review to give people a reference to select the movie that they want to watch.
 
-<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/final/image/demo-01.png" width="50%"/>
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/final/image/demo-02.png" width="50%"/>
 
 *Please check my map demo [here](http://34.228.80.227:8080/aaVis)*
 
