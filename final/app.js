@@ -1,6 +1,6 @@
 // 1. Create dependencies and configure
 var express = require('express'), // npm install express
-    app = express();
+  app = express();
 const { Pool } = require('pg');
 const dotenv = require('dotenv');
 dotenv.config({ path: '/home/ec2-user/environment/.env' });
@@ -28,13 +28,13 @@ app.use(express.static('public'));
 
 // 5. Listen on port 8080
 app.listen(8080, function() {
-    console.log('Server listening...');
+  console.log('Server listening...');
 });
 
 
 // 6. Create an index page for data visualizations and requested data
 app.get('/', function(req, res) {
-    res.send(`<h1>Data Structures Apps</h1>
+  res.send(`<h1>Data Structures Apps</h1>
             <ul><li><a href="/aaVis">Alcoholic Anonymous Meeting</a></li></ul>
             <ul><li><a href="/aaData">Data</a></li></ul>
             <ul><li><a href="/whVis">Movie Watch History</a></li></ul>
@@ -45,7 +45,7 @@ app.get('/', function(req, res) {
 
 
 // 7. AA Meeting: data visualization
-// insert a map on AA meeting data visualization page
+// insert a map on the AA meeting data visualization page
 var aa1 = `<!doctype html>
 <html lang="en">
     <head>
@@ -313,193 +313,328 @@ var aa2 = `;
 </html>`;
 
 app.get('/aaVis', function(req, res) {
-    // Connect to the AWS RDS Postgres database
-    const client = new Pool(db_credentials);
+  // Connect to the AWS RDS Postgres database
+  const client = new Pool(db_credentials);
 
-    // SQL statement to query the selected contents of a table:
-    // var thisQuery = `SELECT lat, lng, location_name, city, state, zip, json_agg(json_build_object('locationName', location_name, 'meetingAddress', address, 'meetingDay', day, 'meetingType', meeting_type, 'timeBegin', time_begin, 'timeEnd', time_end)) as meeting 
-    // FROM meeting     
-    // GROUP BY lat, lng, location_name, city, state, zip;`;
+  // SQL statement to query the selected contents of a table:
+  // var thisQuery = `SELECT lat, lng, location_name, city, state, zip, json_agg(json_build_object('locationName', location_name, 'meetingAddress', address, 'meetingDay', day, 'meetingType', meeting_type, 'timeBegin', time_begin, 'timeEnd', time_end)) as meeting 
+  // FROM meeting     
+  // GROUP BY lat, lng, location_name, city, state, zip;`;
 
-    var thisQuery = `SELECT lat, lng, zip, json_agg(json_build_object('loc', location_name, 'add', address, 'zip', zip, 'lat', lat, 'lng', lng)) as location, json_agg(json_build_object('day', day, 'begin', time_begin, 'end', time_end)) as schedule 
+  var thisQuery = `SELECT lat, lng, zip, json_agg(json_build_object('loc', location_name, 'add', address, 'zip', zip, 'lat', lat, 'lng', lng)) as location, json_agg(json_build_object('day', day, 'begin', time_begin, 'end', time_end)) as schedule 
     FROM meeting     
     GROUP BY lat, lng, zip;`;
 
-    client.query(thisQuery, (qerr, qres) => {
-        if (qerr) { throw qerr }
+  client.query(thisQuery, (qerr, qres) => {
+    if (qerr) { throw qerr }
 
-        else {
-            var resp = aa1 + JSON.stringify(qres.rows) + aa2;
-            res.send(resp);
-            client.end();
-            console.log('1) responded to request for aa meeting data');
-        }
-    });
+    else {
+      var resp = aa1 + JSON.stringify(qres.rows) + aa2;
+      res.send(resp);
+      client.end();
+      console.log('1) responded to request for aa meeting data');
+    }
+  });
 });
 
 
 // 8. AA Meeting: data request
 app.get('/aaData', function(req, res) {
-    // Connect to the AWS RDS Postgres database
-    const client = new Pool(db_credentials);
+  // Connect to the AWS RDS Postgres database
+  const client = new Pool(db_credentials);
 
-    // SQL statement to query the entire contents of a table:
-    var thisQuery = "SELECT * FROM meeting;";
+  // SQL statement to query the entire contents of a table:
+  var thisQuery = "SELECT * FROM meeting;";
 
-    client.connect();
-    client.query(thisQuery, (qerr, qres) => {
-        if (qerr) { throw qerr }
-        else {
-            res.send(qres.rows);
-            client.end();
-            console.log('1.1) responded to request for aa meeting data');
-        }
-    });
+  client.connect();
+  client.query(thisQuery, (qerr, qres) => {
+    if (qerr) { throw qerr }
+    else {
+      res.send(qres.rows);
+      client.end();
+      console.log('1.1) responded to request for aa meeting data');
+    }
+  });
 });
 
 
 // 9. Watch History: data visualization
+// insert a filter on the movie watch history data visualization page
+var wh1 = `<!doctype html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel='stylesheet' type='text/css' href='blog-styles.css'/>
+       <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+          <title>Movie Watch History</title>
+          <meta name="author" content="Yujun Jiang">
+  </head>
+  <body>
+    <div id="history">
+      <br>
+      <h1><a class="category" href="whVis.html">Full Watch History</a></h1>
+      <h2>
+        From January 1, 2019 to December 31, 2019
+      </h2>
+      <div class="container" id="container">
+      </div>
+    </div>
+    <script type="text/javascript">
+      var data =`;
+
+var wh2 = `;
+var container = document.getElementById("container");
+for (var i=0; i<data.length; i++){
+  var item = document.createElement("div");
+  item.setAttribute("class","timeline-item");
+  item.setAttribute("date-is",data[i].date.S);
+
+  var title=0, type=0, rating=0, imdb=0;
+  var titletext, typetext, ratingtext, imdbtext;
+ 
+  if (data[i].title != undefined)
+    {title = data[i].title.S;}
+  titletext = "Movie Title: "+title+"; ";
+  
+  if (data[i].type != undefined)
+    {type = data[i].type.S;}
+  typetext = "Movie Type: "+type+"; ";
+  
+  if (data[i].rating != undefined)
+    {rating = data[i].rating.S;}
+  ratingtext = "Rating: "+rating+"; ";
+  
+  if (data[i].imdb != undefined)
+    {imdb = data[i].imdb.S;}
+  imdbtext = "IMDb Score: "+imdb+"; ";
+  
+  var entry = document.createElement("p");
+  var entrytext = document.createTextNode(titletext+typetext+ratingtext+imdbtext);
+  entry.appendChild(entrytext);
+  item.appendChild(entry);
+  container.append(item);
+}
+
+        </script>
+    </body>
+</html>`;
+
+
+
+
 app.get('/whVis', function(req, res) {
-    // var dynamodb = new AWS.DynamoDB();
-    var params = {
-        TableName: "watch-history",
-        KeyConditionExpression: "#tp = :categoryName and #dt between :minDate and :maxDate", // the query expression
-        ExpressionAttributeNames: { // name substitution, used for reserved words in DynamoDB
-            "#tp": "category",
-            "#dt": "date"
-        },
-        ExpressionAttributeValues: { // the query values
-            ":categoryName": { S: "Action" },
-            ":minDate": { S: new Date("January 1, 2019").toISOString() },
-            ":maxDate": { S: new Date("December 31, 2019").toISOString() }
-        }
-    };
+  // var dynamodb = new AWS.DynamoDB();
 
-    var something = '' + '<ul><li><a href="/">Back</a></li></ul>';
-    dynamodb.query(params, function(err, data) {
-        if (err) {
-            console.error("Unable to query. Error:", JSON.stringify(err, null, 2));
-            throw (err);
-        }
-        else {
-            console.log("Query succeeded.");
-            data.Items.forEach(function(item) {
-                console.log("***** ***** ***** ***** ***** \n", item);
-                something += item.date.S;
-            });
-            res.send(something);
+  var params = {
+    TableName: "watch-history",
+    KeyConditionExpression: "#tp = :categoryName and #dt between :minDate and :maxDate", // the query expression
+    ExpressionAttributeNames: { // name substitution, used for reserved words in DynamoDB
+      "#tp": "category",
+      "#dt": "date"
+    },
+    ExpressionAttributeValues: { // the query values
+      ":categoryName": { S: "Movie" },
+      ":minDate": { S: new Date("January 1, 2019").toISOString() },
+      ":maxDate": { S: new Date("December 31, 2019").toISOString() }
+    }
+  };
 
-        }
-    });
+  dynamodb.query(params, function(err, data) {
+    if (err) {
+      console.error("Unable to query. Error:", JSON.stringify(err, null, 2));
+      throw (err);
+    }
+    else {
+      var resp = wh1 + JSON.stringify(data.Items) + wh2;
+      res.send(resp);
+      console.log('2) responded to request for watch history data');
+
+    }
+  });
 });
 
 
 // 10. Watch History: data request
 app.get('/whData', function(req, res) {
-    // var dynamodb = new AWS.DynamoDB();
+  // var dynamodb = new AWS.DynamoDB();
 
-    var output = {};
-    output.wh = [];
+  var params = {
+    TableName: "watch-history",
+    KeyConditionExpression: "#tp = :categoryName and #dt between :minDate and :maxDate", // the query expression
+    ExpressionAttributeNames: { // name substitution, used for reserved words in DynamoDB
+      "#tp": "category",
+      "#dt": "date"
+    },
+    ExpressionAttributeValues: { // the query values
+      ":categoryName": { S: "Movie" },
+      ":minDate": { S: new Date("January 1, 2019").toISOString() },
+      ":maxDate": { S: new Date("December 31, 2019").toISOString() }
+    }
+  };
 
-    var params = {
-        TableName: "watch-history",
-        KeyConditionExpression: "#tp = :categoryName and #dt between :minDate and :maxDate", // the query expression
-        ExpressionAttributeNames: { // name substitution, used for reserved words in DynamoDB
-            "#tp": "category",
-            "#dt": "date"
-        },
-        ExpressionAttributeValues: { // the query values
-            ":categoryName": { S: "Movie" },
-            ":minDate": { S: new Date("January 1, 2019").toISOString() },
-            ":maxDate": { S: new Date("December 31, 2019").toISOString() }
-        }
-    };
+  dynamodb.query(params, function(err, data) {
+    if (err) {
+      console.error("Unable to query. Error:", JSON.stringify(err, null, 2));
+      throw (err);
+    }
+    else {
+      res.send(data.Items);
+      console.log('2.1) responded to request for watch history data');
 
-    // var something = '' + '<ul><li><a href="/">Back</a></li></ul>';
-    dynamodb.query(params, function(err, data) {
-        if (err) {
-            console.error("Unable to query. Error:", JSON.stringify(err, null, 2));
-            throw (err);
-        }
-        else {
-            console.log("Query succeeded.");
-            data.Items.forEach(function(item) {
-                console.log("***** ***** ***** ***** ***** \n", item);
-                // something += item.date.S;
-                output.wh.push({ 'type': item.type.S, 'date': item.date.S });
-            });
-            res.send(output);
-
-        }
-    });
+    }
+  });
 });
 
 
 // 11. Temperature Sensor: data visualization
+// insert a diagram on the temperature sensor data visualization page
+var ts1 = `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Temperature Sensor</title>
+    <meta name="author" content="Yujun Jiang">
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text|Mina|Source+Code+Pro');
+    html {
+      height: 100%;
+      overflow: hidden;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+        background-color: #ffffff;
+    </style>
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="tempVis"></div>
+    <script type="text/javascript">
+      var data =`;
+
+var ts2 = `;
+// set the dimensions and margins of the graph
+var margin = {top: 30, right: 30, bottom: 30, left: 30},
+  width = 1000 - margin.left - margin.right,
+  height = 800 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#tempVis")
+.append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+.append("g")
+  .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+
+// Labels of row and columns
+var tempDay = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28"]
+var tempHour = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
+
+// Build X scales and axis:
+var x = d3.scaleBand()
+  .range([ 0, width ])
+  .domain(tempDay)
+  .padding(0.01);
+svg.append("g")
+  .attr("transform", "translate(0," + height + ")")
+  .call(d3.axisBottom(x))
+
+// Build X scales and axis:
+var y = d3.scaleBand()
+  .range([ height, 0 ])
+  .domain(tempHour)
+  .padding(0.01);
+svg.append("g")
+  .call(d3.axisLeft(y));
+
+// Build color scale
+var myColor = d3.scaleLinear()
+  .range(["blue", "green", "red"])
+  .domain([64,72,80])
+
+//Read the data
+d3.json("/tsData", function(data) {
+
+  console.log(data[0]);
+
+  svg.selectAll()
+      .data(data, function(d) {return d.sensorday+':'+d.sensorhour;})
+      .enter()
+      .append("rect")
+      .attr("x", function(d) { return x(d.sensorday) })
+      .attr("y", function(d) { return y(d.sensorhour) })
+      .attr("width", x.bandwidth() )
+      .attr("height", y.bandwidth() )
+      .style("fill", function(d) { return myColor(d.avgtemp)} )
+
+})
+        </script>
+    </body>
+</html>`;
+
 app.get('/tsVis', function(req, res) {
-    const { Client } = require('pg');
-    var db_credentials = new Object();
-    db_credentials.user = 'yujunmjiang';
-    db_credentials.host = process.env.AWSRDS_EP;
-    db_credentials.database = 'aa';
-    db_credentials.password = process.env.AWSRDS_PW;
-    db_credentials.port = 5432;
+  const { Client } = require('pg');
+  var db_credentials = new Object();
+  db_credentials.user = 'yujunmjiang';
+  db_credentials.host = process.env.AWSRDS_EP;
+  db_credentials.database = 'aa';
+  db_credentials.password = process.env.AWSRDS_PW;
+  db_credentials.port = 5432;
 
-    var client = new Client(db_credentials);
-    client.connect();
+  var client = new Client(db_credentials);
+  client.connect();
 
-    var tsoutput = [];
+  // SQL statement to query the entire contents of a table:
+  var thisQuery = `SELECT 
+             EXTRACT(DAY FROM sensorTime) as sensorday,
+             EXTRACT(HOUR FROM sensorTime) as sensorhour,
+             AVG(sensorValue::int) as AVGTEMP
+             FROM sensorData
+             GROUP BY sensorday, sensorhour
+             ORDER BY sensorday;`;
 
-    // Sample SQL statement to query the entire contents of a table:
-    var thisQuery = "SELECT * FROM sensorData;"; // print all values
-    // var secondQuery = "SELECT COUNT (*) FROM sensorData;"; // print the number of rows
-    // var thirdQuery = "SELECT sensorValue, COUNT (*) FROM sensorData GROUP BY sensorValue;";
-
-    client.query(thisQuery, (err, response) => {
-        var output = response.rows;
-        tsoutput.push(output);
-        console.log(err);
-        var visHtml = '' + '<ul><li><a href="/">Back</a></li></ul>';
-        // for (var i = 0; i < tsoutput[0].length; i++) {
-        //     visHtml += "<p>" + JSON.stringify(tsoutput[0][i]) + "</p>";
-        // }
-        res.send(visHtml);
-        client.end();
-    });
-
+  client.query(thisQuery, (qerr, qres) => {
+    if (qerr) { throw qerr }
+    else {
+      var resp = ts1 + JSON.stringify(qres.rows) + ts2;
+      res.send(resp);
+      client.end();
+      console.log('3) responded to request for sensor graph');
+    }
+  });
 });
 
 
 // 12. Temperature Sensor: data request
 app.get('/tsData', function(req, res) {
-    const { Client } = require('pg');
-    var db_credentials = new Object();
-    db_credentials.user = 'yujunmjiang';
-    db_credentials.host = process.env.AWSRDS_EP;
-    db_credentials.database = 'aa';
-    db_credentials.password = process.env.AWSRDS_PW;
-    db_credentials.port = 5432;
+  const { Client } = require('pg');
+  var db_credentials = new Object();
+  db_credentials.user = 'yujunmjiang';
+  db_credentials.host = process.env.AWSRDS_EP;
+  db_credentials.database = 'aa';
+  db_credentials.password = process.env.AWSRDS_PW;
+  db_credentials.port = 5432;
 
-    var client = new Client(db_credentials);
-    client.connect();
+  var client = new Client(db_credentials);
+  client.connect();
 
-    var tsoutput = [];
+  // SQL statement to query the entire contents of a table:
+  var thisQuery = `SELECT 
+             EXTRACT(DAY FROM sensorTime) as sensorday,
+             EXTRACT(HOUR FROM sensorTime) as sensorhour,
+             AVG(sensorValue::int) as AVGTEMP
+             FROM sensorData
+             GROUP BY sensorday, sensorhour
+             ORDER BY sensorday;`;
 
-    // Sample SQL statement to query the entire contents of a table:
-    var thisQuery = "SELECT * FROM sensorData;"; // print all values
-    // var secondQuery = "SELECT COUNT (*) FROM sensorData;"; // print the number of rows
-    // var thirdQuery = "SELECT sensorValue, COUNT (*) FROM sensorData GROUP BY sensorValue;";
-
-    client.query(thisQuery, (err, response) => {
-        var output = response.rows;
-        tsoutput.push(output);
-        console.log(err);
-        var dataHtml = '' + '<ul><li><a href="/">Back</a></li></ul>';
-        for (var i = 0; i < tsoutput[0].length; i++) {
-            dataHtml += "<p>" + JSON.stringify(tsoutput[0][i]) + "</p>";
-        }
-        res.send(dataHtml);
-        client.end();
-    });
-
+  client.query(thisQuery, (qerr, qres) => {
+    if (qerr) { throw qerr }
+    else {
+      res.send(qres.rows);
+      client.end();
+      console.log('3.1) responded to request for sensor data');
+    }
+  });
 });
