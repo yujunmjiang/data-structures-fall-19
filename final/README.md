@@ -2,7 +2,9 @@
 
 The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be found [here](https://github.com/visualizedata/data-structures/tree/master/final_code_demo)
 
-*Final Assignment 1: Alcoholic Anonymous Meeting*
+### Index
+
+*Final Assignment 1: [Alcoholic Anonymous Meeting](https://github.com/yujunmjiang/data-structures-fall-19/blob/master/final/FINAL-PROJECT-01.md)*
 
 Using: 
 
