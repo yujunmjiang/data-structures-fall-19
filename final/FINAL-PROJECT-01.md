@@ -65,7 +65,7 @@ I have rewrote my query for AA data and used latitude, longitude, and zip code t
 
 *Please check my parsed data [here](http://34.228.80.227:8080/aaData)*
 
-#### Design Concept
+#### Visual Design
 
 *Please check my map demo [here](http://34.228.80.227:8080/aaVis)*
 
