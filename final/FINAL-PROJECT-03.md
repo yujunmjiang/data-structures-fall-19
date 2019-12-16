@@ -31,7 +31,7 @@ To check on my database periodically to ensure that sensor values are recording 
 
 #### Visual Design
 
-For the visualization of the termperature data in my kitchen, I use [D3.js (version 3)](https://github.com/d3/d3-3.x-api-reference/blob/master/API-Reference.md) to set up a termperature range between 64 to 80 celsius in RGB color mode with `.range()` and `.domain()`.
+For the visualization of the termperature data in my kitchen, I use [D3.js (version 3)](https://github.com/d3/d3-3.x-api-reference/blob/master/API-Reference.md) to set up a termperature range between 64 to 80 celsius with RGB color. As the visual language, red (too warm) and blue (too cold) are representing all the uncomfortable degrees. Then, green color conveys a comfortable degree (72 celsius).
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/final/image/demo-03.png" width="50%"/>
 
