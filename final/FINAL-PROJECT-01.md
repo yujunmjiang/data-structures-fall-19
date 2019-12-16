@@ -18,7 +18,7 @@ https://parsons.nyc/aa/m09.html
 https://parsons.nyc/aa/m10.html   
 ```
 
-Some questions that may arise as you bind the data to the end-user interface:
+Some questions from the data to the end-user interface:
 
 1. What information does the end user need? How? Why?  
 2. From the data on AA's meeting list, which data is relevant for display in this project? How should it be displayed?  
