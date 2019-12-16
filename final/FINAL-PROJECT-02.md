@@ -48,7 +48,7 @@ This dataset is about all the movies that have been released in 2019 and my pers
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week05/data-model.png" width="50%"/>
 
-*Please check my parsed data [here](http://34.228.80.227:8080/whVis)*
+*Please check my parsed data [here](http://34.228.80.227:8080/whData)*
 
 #### Visual Design
 
