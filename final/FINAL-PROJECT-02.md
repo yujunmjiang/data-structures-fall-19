@@ -52,7 +52,7 @@ This dataset is about all the movies that have been released in 2019 and my pers
 
 #### Visual Design
 
-For the visualization of my movie watch history blog, I kept some important information such us movie title, type, rating, and IMDb score. I will continue to work on the rest of part includes movie poster, description, and review to give people a reference to select the movie that they want to watch.
+For the visualization of my movie watch history blog, I kept some important information such us movie title, type, rating, and IMDb score. I will continue to work on the rest of part includes movie poster, description, and review to give people a reference to select a movie that they want to watch during the holiday season.
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/final/image/demo-02.png" width="50%"/>
 
