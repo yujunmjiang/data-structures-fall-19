@@ -51,6 +51,10 @@ Before to build the data mode, I rearranged the AA Meeting's data into six categ
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week04/data-model.png" width="50%"/>
 
+Base on the data model in [weekly assignment 04](https://github.com/yujunmjiang/data-structures-fall-19/tree/master/week04), I used SQL statement to query address and Geocode from AA dataset.
+
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week06/sample-1.png" width="50%"/>
+
 #### AA Meeting Map
 
 *Please check my map demo [here](http://34.228.80.227:8080/aaVis)*
