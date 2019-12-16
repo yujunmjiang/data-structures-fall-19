@@ -1,4 +1,4 @@
-# Final Assignments 2: Temperature Sensor
+# Final Assignments 3: Temperature Sensor
 
 The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be found [here](https://github.com/visualizedata/data-structures/blob/master/final_assignment_3.md)
 
