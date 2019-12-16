@@ -48,30 +48,7 @@ This dataset is about all the movies that have been released in 2019 and my pers
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week05/data-model.png" width="50%"/>
 
-Make a request to the [Texas A&M Geoservices Geocoding APIs](https://geoservices.tamu.edu/) for each address and create `.env` file to hide TAMU api key. Add all elements to the end of an array called `addresses`, use `eachSeries` in the async module iterates over an array and operates on each item in the array in series.
-
-```javascript
-dotenv.config();
-const apiKey = process.env.TAMU_KEY;
-```
-
-Before to build the data mode, I rearranged the AA meeting's data into six categories: building name, location infomation, meeting title, time information, meeting type, and special interest. As the concept to make a design for a particular organization's needs, I was inspired by the idea of denormalized data. The data model should focus on four entities: location, time, meeting, and special interest. The foreign key (FK) gave an access between each table.
-
-<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week04/data-model.png" width="50%"/>
-
-Use the [`pg` module](https://node-postgres.com/) in Node to insert my AA data in the database I created. Modify the starter code to replace the database credentials with my own. It includes three SQL queries that I can modify to accomplish the following tasks in my new database, with the help of the `pg` module in Node. Base on the data model in [weekly assignment 04](https://github.com/yujunmjiang/data-structures-fall-19/tree/master/week04), I used SQL statement to query address and Geocode from AA dataset.
-
-<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week06/sample-1.png" width="50%"/>
-
-I have rewrote my query for AA data and used latitude, longitude, and zip code to group the data points.
-
-```javascript
-  var thisQuery = `SELECT lat, lng, zip, json_agg(json_build_object('loc', location_name, 'add', address, 'zip', zip, 'lat', lat, 'lng', lng)) as location, json_agg(json_build_object('day', day, 'begin', time_begin, 'end', time_end)) as schedule 
-                   FROM meeting     
-                   GROUP BY lat, lng, zip;`;
-```
-
-*Please check my parsed data [here](http://34.228.80.227:8080/aaData)*
+*Please check my parsed data [here](http://34.228.80.227:8080/whVis)*
 
 #### Visual Design
 
