@@ -46,7 +46,7 @@ class BlogEntry {
 
 This dataset is about all the movies that have been released in 2019 and my personal watching history. I choose the release date as `partition key` and movie category as `sort key`. The dataset also include movie title, rating, IMDb score, and two related questions (e.g. Did I watch this movie? / What did I eat in the theatre?)
 
-<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week05/sample-1.png" width="50%"/>
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week05/data-model.png" width="50%"/>
 
 Make a request to the [Texas A&M Geoservices Geocoding APIs](https://geoservices.tamu.edu/) for each address and create `.env` file to hide TAMU api key. Add all elements to the end of an array called `addresses`, use `eachSeries` in the async module iterates over an array and operates on each item in the array in series.
 
