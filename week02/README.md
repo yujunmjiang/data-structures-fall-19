@@ -67,7 +67,7 @@ $('td').each(function(i, elem) {
 });
 ```
     
-Remove all unnecessary content by tag `b`, `div`, and `span`.
+Remove all the unnecessary content by tag `b`, `div`, and `span`.
 
 ```javascript
 $('b, div, span').remove();
