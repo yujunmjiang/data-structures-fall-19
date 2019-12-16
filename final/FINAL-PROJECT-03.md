@@ -31,7 +31,7 @@ To check on my database periodically to ensure that sensor values are recording 
 
 #### Visual Design
 
-For the visualization of my movie watch history blog, I kept some important information such us movie title, type, rating, and IMDb score. I will continue to work on the rest of part includes movie poster, description, and review to give people a reference to select a movie that they want to watch during the holiday season.
+For the visualization of the termperature data in my kitchen, I use [D3.js (version 3)](https://github.com/d3/d3-3.x-api-reference/blob/master/API-Reference.md) to set up a termperature range between 64 to 80 celsius in RGB color mode with `.range()` and `.domain()`.
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/final/image/demo-03.png" width="50%"/>
 
