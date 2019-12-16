@@ -63,7 +63,9 @@ I have rewrote my query for AA data and used latitude, longitude, and zip code t
                    GROUP BY lat, lng, zip;`;
 ```
 
-#### AA Meeting Map
+*Please check my parsed data [here](http://34.228.80.227:8080/aaData)*
+
+#### Design Concept
 
 *Please check my map demo [here](http://34.228.80.227:8080/aaVis)*
 
