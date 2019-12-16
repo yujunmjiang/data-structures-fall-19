@@ -9,7 +9,9 @@ Some questions from the data to the end-user interface:
 1. What information does the end user need? How? Why?  
 2. From the data on AA's meeting list, which data is relevant for display in this project? How should it be displayed?  
 3. What does a map marker represent? A meeting group? A meeting? A location?  
-4. What is the minimum amount of data that can be queried to provide the necessary data for the visual representation? 
+4. What is the minimum amount of data that can be queried to provide the necessary data for the visual representation?
+
+Please check my discussion of scalability and storytelling [here](https://github.com/yujunmjiang/data-structures-fall-19/blob/master/final/data-structures-final.pdf)
 
 #### Data Parsing
 
