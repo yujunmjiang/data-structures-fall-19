@@ -44,7 +44,7 @@ class BlogEntry {
 }
 ```
 
-Select tag `td` and use attribute to narrow down the requested data. Then, remove all the unnecessary content by tag `b`, `div`, and `span`. This step is a preparation before I add latitude and longitude.
+This dataset is about all the movies that have been released in 2019 and my personal watching history. I choose the release date as `partition key` and movie category as `sort key`. The dataset also include movie title, rating, IMDb score, and two related questions (e.g. Did I watch this movie? / What did I eat in the theatre?)
 
 ```javascript
 $('td').each(function(i, elem) {
