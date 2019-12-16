@@ -2,7 +2,7 @@
 
 The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be found [here](https://github.com/visualizedata/data-structures/blob/master/final_assignment_1.md)
 
-#### AA Meeting Map
+#### Data Parsing
 
 The ten "Meeting List Agenda" pages for Manhattan are available at:  
 ```
@@ -24,6 +24,8 @@ Some questions from the data to the end-user interface:
 2. From the data on AA's meeting list, which data is relevant for display in this project? How should it be displayed?  
 3. What does a map marker represent? A meeting group? A meeting? A location?  
 4. What is the minimum amount of data that can be queried to provide the necessary data for the visual representation? 
+
+#### AA Meeting Map
 
 Please check my map demo by this address: http://34.228.80.227:8080/aaVis
 
