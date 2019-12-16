@@ -40,6 +40,8 @@ $('td').each(function(i, elem) {
 });
 ```
 
+Make a request to the Texas A&M Geoservices Geocoding APIs for each address and create `.env` file to hide TAMU api key.
+
 #### AA Meeting Map
 
 *Please check my map demo [here](http://34.228.80.227:8080/aaVis)*
