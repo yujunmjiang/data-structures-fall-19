@@ -12,7 +12,7 @@ Using:
 * [Leaflet](https://leafletjs.com/examples/quick-start/)  
 * [Moment](https://momentjs.com/timezone/docs/) (for working with Time Zones)
 
-*Final Assignment 2: Movie Watch History*
+*Final Assignment 2: [Movie Watch History](https://github.com/yujunmjiang/data-structures-fall-19/blob/master/final/FINAL-PROJECT-02.md)*
 
 Using: 
 
