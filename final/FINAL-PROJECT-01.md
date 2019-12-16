@@ -59,8 +59,8 @@ I have rewrote my query for AA data and used latitude, longitude, and zip code t
 
 ```javascript
   var thisQuery = `SELECT lat, lng, zip, json_agg(json_build_object('loc', location_name, 'add', address, 'zip', zip, 'lat', lat, 'lng', lng)) as location, json_agg(json_build_object('day', day, 'begin', time_begin, 'end', time_end)) as schedule 
-    FROM meeting     
-    GROUP BY lat, lng, zip;`;
+                   FROM meeting     
+                   GROUP BY lat, lng, zip;`;
 ```
 
 #### AA Meeting Map
