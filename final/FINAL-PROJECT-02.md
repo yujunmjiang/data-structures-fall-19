@@ -56,5 +56,5 @@ For the visualization of my movie watch history blog, I kept some important info
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/final/image/demo-02.png" width="50%"/>
 
-*Please check my map demo [here](http://34.228.80.227:8080/aaVis)*
+*Please check my map demo [here](http://34.228.80.227:8080/whVis)*
 
