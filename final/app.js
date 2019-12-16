@@ -316,11 +316,6 @@ app.get('/aaVis', function(req, res) {
   // Connect to the AWS RDS Postgres database
   const client = new Pool(db_credentials);
 
-  // SQL statement to query the selected contents of a table:
-  // var thisQuery = `SELECT lat, lng, location_name, city, state, zip, json_agg(json_build_object('locationName', location_name, 'meetingAddress', address, 'meetingDay', day, 'meetingType', meeting_type, 'timeBegin', time_begin, 'timeEnd', time_end)) as meeting 
-  // FROM meeting     
-  // GROUP BY lat, lng, location_name, city, state, zip;`;
-
   var thisQuery = `SELECT lat, lng, zip, json_agg(json_build_object('loc', location_name, 'add', address, 'zip', zip, 'lat', lat, 'lng', lng)) as location, json_agg(json_build_object('day', day, 'begin', time_begin, 'end', time_end)) as schedule 
     FROM meeting     
     GROUP BY lat, lng, zip;`;
