@@ -67,7 +67,7 @@ I have rewrote my query for AA data and used latitude, longitude, and zip code t
 
 #### Visual Design
 
-For the visualization of AA meeting, I use [Mapbox](https://www.mapbox.com/) api and [Leaflet.js](https://leafletjs.com/) to build an interactive map with a filter base on zip code relates to [ten areas](https://www.health.ny.gov/statistics/cancer/registry/appendix/neighborhoods.htm) in Manhattan.
+For the visualization of AA meeting, I use [Mapbox](https://www.mapbox.com/) api and [Leaflet.js](https://leafletjs.com/) to build an interactive map with a filter of the zip code base on [ten areas](https://www.health.ny.gov/statistics/cancer/registry/appendix/neighborhoods.htm) in Manhattan.
 
 *Please check my map demo [here](http://34.228.80.227:8080/aaVis)*
 
