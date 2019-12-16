@@ -40,7 +40,12 @@ $('td').each(function(i, elem) {
 });
 ```
 
-Make a request to the Texas A&M Geoservices Geocoding APIs for each address and create `.env` file to hide TAMU api key.
+Make a request to the [Texas A&M Geoservices Geocoding APIs](https://geoservices.tamu.edu/) for each address and create `.env` file to hide TAMU api key.
+
+```javascript
+dotenv.config();
+const apiKey = process.env.TAMU_KEY;
+```
 
 #### AA Meeting Map
 
