@@ -7,7 +7,7 @@ The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be fo
 Some questions from the data to the end-user interface:
 
 1. What information does the end user need? How? Why?  
-2. From the data on AA's meeting list, which data is relevant for display in this project? How should it be displayed?  
+2. From the data on AA meeting list, which data is relevant for display in this project? How should it be displayed?  
 3. What does a map marker represent? A meeting group? A meeting? A location?  
 4. What is the minimum amount of data that can be queried to provide the necessary data for the visual representation?
 
@@ -47,7 +47,7 @@ dotenv.config();
 const apiKey = process.env.TAMU_KEY;
 ```
 
-Before to build the data mode, I rearranged the AA Meeting's data into six categories: building name, location infomation, meeting title, time information, meeting type, and special interest. As the concept to make a design for a particular organization's needs, I was inspired by the idea of denormalized data. The data model should focus on four entities: location, time, meeting, and special interest. The foreign key (FK) gave an access between each table.
+Before to build the data mode, I rearranged the AA meeting's data into six categories: building name, location infomation, meeting title, time information, meeting type, and special interest. As the concept to make a design for a particular organization's needs, I was inspired by the idea of denormalized data. The data model should focus on four entities: location, time, meeting, and special interest. The foreign key (FK) gave an access between each table.
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week04/data-model.png" width="50%"/>
 
@@ -66,6 +66,8 @@ I have rewrote my query for AA data and used latitude, longitude, and zip code t
 *Please check my parsed data [here](http://34.228.80.227:8080/aaData)*
 
 #### Visual Design
+
+For the visualization of AA meeting, I use [Mapbox](https://www.mapbox.com/) api and [Leaflet.js](https://leafletjs.com/) to build an interactive map with a filter base on zip code relates to [ten areas](https://www.health.ny.gov/statistics/cancer/registry/appendix/neighborhoods.htm) in Manhattan.
 
 *Please check my map demo [here](http://34.228.80.227:8080/aaVis)*
 
