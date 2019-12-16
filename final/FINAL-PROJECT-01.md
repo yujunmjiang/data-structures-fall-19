@@ -29,7 +29,7 @@ https://parsons.nyc/aa/m09.html
 https://parsons.nyc/aa/m10.html   
 ```
 
-Select tag `td` and use attribute to narrow down the requested data. Then, remove all the unnecessary content by tag `b`, `div`, and `span`.
+Select tag `td` and use attribute to narrow down the requested data. Then, remove all the unnecessary content by tag `b`, `div`, and `span`. This step is a preparation before I add latitude and longitude.
 
 ```javascript
 $('td').each(function(i, elem) {
