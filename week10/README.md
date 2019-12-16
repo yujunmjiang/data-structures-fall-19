@@ -17,7 +17,7 @@ app.get('/', function(req, res) {
 
 #### Project Pages
 
-On the project page (e.g. temperature sensor data), visitos can check both queried and visualized data by two different links.
+On the project page (e.g. temperature sensor data), visitors can check both queried and visualized data by two different links.
 
 ```javascript
 app.get('/ts.html', function(req, res) {
