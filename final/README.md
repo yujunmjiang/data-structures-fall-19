@@ -2,5 +2,6 @@
 
 The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be found [here](https://github.com/visualizedata/data-structures/tree/master/final_code_demo)
 
-### Data Structures Apps
-Please check my running appliations by this address: http://34.228.80.227:8080/
+Final Assignment 1: Alcoholic Anonymous Meeting
+Final Assignment 2: Movie Watch History
+Final Assignment 3: Temperature Sensor
