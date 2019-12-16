@@ -47,6 +47,10 @@ dotenv.config();
 const apiKey = process.env.TAMU_KEY;
 ```
 
+Before to build the data mode, I rearranged the AA Meeting's data into six categories: building name, location infomation, meeting title, time information, meeting type, and special interest. As the concept to make a design for a particular organization's needs, I was inspired by the idea of denormalized data. The data model should focus on four entities: location, time, meeting, and special interest. The foreign key (FK) gave an access between each table.
+
+<img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week04/data-model.png" width="50%"/>
+
 #### AA Meeting Map
 
 *Please check my map demo [here](http://34.228.80.227:8080/aaVis)*
