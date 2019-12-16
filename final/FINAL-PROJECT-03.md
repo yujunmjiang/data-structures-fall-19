@@ -21,6 +21,7 @@ var device_id = process.env.PHOTON_ID;
 var access_token = process.env.PHOTON_TOKEN;
 var particle_variable = 'tempsensor';
 var device_url = 'https://api.particle.io/v1/devices/' + device_id + '/' + particle_variable + '?access_token=' + access_token;
+```
 
 To check on my database periodically to ensure that sensor values are recording as expected, use [`tempData.js`](https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week09/tempData.js).
 
