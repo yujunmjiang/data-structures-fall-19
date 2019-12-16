@@ -4,29 +4,44 @@ The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be fo
 
 ### Assumptions
 
-Some questions from the data to the end-user interface:
+Some decisions that will help with this drawing:
 
-1. What information does the end user need? How? Why?  
-2. From the data on AA meeting list, which data is relevant for display in this project? How should it be displayed?  
-3. What does a map marker represent? A meeting group? A meeting? A location?  
-4. What is the minimum amount of data that can be queried to provide the necessary data for the visual representation?
-
-*Please check my discussion of scalability and storytelling [here](https://github.com/yujunmjiang/data-structures-fall-19/blob/master/final/data-structures-final.pdf)*
+1. Will you use a [Normalized Data Model or a Denormalized Data Model](https://www.quora.com/What-is-normalized-vs-denormalized-data)? Why?  
+2. When the data comes back out of the database, how should it be structured? Why?  
+3. How would I describe the hierarchy of the data?  
 
 ### Data Parsing
 
-The ten "Meeting List Agenda" pages for Manhattan are available at:  
+In Part Three of this assignment, I will be using [`putItem`](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#putItem-property) in the [AWS SDK for JavaScript in Node.js](https://aws.amazon.com/sdk-for-node-js/). Reference the [DynamoDB class](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html) for information about the [PutItem method](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html#putItem-property) and data types. The documentation shows how the items should be mapped and how to specify data types. In preparation for Part Three, the following starter code creates several "Items" destined for DynamoDB (adhering to the expected Item attributes and values), storing them in an array named `blogEntries`: 
 ```
-https://parsons.nyc/aa/m01.html  
-https://parsons.nyc/aa/m02.html  
-https://parsons.nyc/aa/m03.html  
-https://parsons.nyc/aa/m04.html  
-https://parsons.nyc/aa/m05.html  
-https://parsons.nyc/aa/m06.html  
-https://parsons.nyc/aa/m07.html  
-https://parsons.nyc/aa/m08.html  
-https://parsons.nyc/aa/m09.html  
-https://parsons.nyc/aa/m10.html   
+var blogEntries = [];
+
+class BlogEntry {
+  constructor(date, category, title, rating, imdb, watched, ate) {
+    // this.pk = {};
+    // this.pk.N = primaryKey.toString();
+    this.category = {}; // Partition key
+    this.category.S = category;
+    this.date = {}; // Sort key
+    this.date.S = new Date(date).toISOString();
+    this.type = {};
+    this.type.S = type; 
+    this.title = {};
+    this.title.S = title;
+    this.rating = {};
+    this.rating.S = rating;
+    this.imdb = {};
+    this.imdb.S = imdb;
+    this.watched = {};
+    this.watched.BOOL = watched;
+    if (ate != null) {
+      this.ate = {};
+      this.ate.SS = ate;
+    }
+    this.month = {};
+    this.month.N = new Date(date).getMonth().toString();
+  }
+}
 ```
 
 Select tag `td` and use attribute to narrow down the requested data. Then, remove all the unnecessary content by tag `b`, `div`, and `span`. This step is a preparation before I add latitude and longitude.
