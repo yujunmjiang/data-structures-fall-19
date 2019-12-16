@@ -40,7 +40,7 @@ $('td').each(function(i, elem) {
 });
 ```
 
-Make a request to the [Texas A&M Geoservices Geocoding APIs](https://geoservices.tamu.edu/) for each address and create `.env` file to hide TAMU api key.
+Make a request to the [Texas A&M Geoservices Geocoding APIs](https://geoservices.tamu.edu/) for each address and create `.env` file to hide TAMU api key. Add all elements to the end of an array called `addresses`, use `eachSeries` in the async module iterates over an array and operates on each item in the array in series.
 
 ```javascript
 dotenv.config();
