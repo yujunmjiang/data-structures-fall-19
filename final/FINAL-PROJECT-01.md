@@ -1,4 +1,4 @@
-## Final Assignments 1: Alcoholic Anonymous Meeting
+# Final Assignments 1: Alcoholic Anonymous Meeting
 
 The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be found [here](https://github.com/visualizedata/data-structures/blob/master/final_assignment_1.md)
 
