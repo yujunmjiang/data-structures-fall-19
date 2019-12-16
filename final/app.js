@@ -419,9 +419,6 @@ for (var i=0; i<data.length; i++){
     </body>
 </html>`;
 
-
-
-
 app.get('/whVis', function(req, res) {
   // var dynamodb = new AWS.DynamoDB();
 
