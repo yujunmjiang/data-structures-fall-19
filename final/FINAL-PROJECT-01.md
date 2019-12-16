@@ -4,6 +4,15 @@ The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be fo
 
 #### Assumptions
 
+Some questions from the data to the end-user interface:
+
+1. What information does the end user need? How? Why?  
+2. From the data on AA's meeting list, which data is relevant for display in this project? How should it be displayed?  
+3. What does a map marker represent? A meeting group? A meeting? A location?  
+4. What is the minimum amount of data that can be queried to provide the necessary data for the visual representation? 
+
+#### Data Parsing
+
 The ten "Meeting List Agenda" pages for Manhattan are available at:  
 ```
 https://parsons.nyc/aa/m01.html  
@@ -18,12 +27,6 @@ https://parsons.nyc/aa/m09.html
 https://parsons.nyc/aa/m10.html   
 ```
 
-Some questions from the data to the end-user interface:
-
-1. What information does the end user need? How? Why?  
-2. From the data on AA's meeting list, which data is relevant for display in this project? How should it be displayed?  
-3. What does a map marker represent? A meeting group? A meeting? A location?  
-4. What is the minimum amount of data that can be queried to provide the necessary data for the visual representation? 
 
 #### AA Meeting Map
 
