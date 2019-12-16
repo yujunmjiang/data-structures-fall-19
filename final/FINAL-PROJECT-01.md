@@ -32,5 +32,5 @@ https://parsons.nyc/aa/m10.html
 
 #### AA Meeting Map
 
-Please check my map demo by this address: http://34.228.80.227:8080/aaVis
+*Please check my map demo [here](http://34.228.80.227:8080/aaVis)*
 
