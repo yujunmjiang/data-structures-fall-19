@@ -29,6 +29,15 @@ https://parsons.nyc/aa/m09.html
 https://parsons.nyc/aa/m10.html   
 ```
 
+Select tag `td` and use attribute to narrow down the requested data.
+
+```javascript
+$('td').each(function(i, elem) {
+    if ($(elem).attr("style") == "border-bottom:1px solid #e3e3e3; width:260px") {
+        dataManhattan += ($(elem).text()).trim() + '\n';
+    }
+});
+```
 
 #### AA Meeting Map
 
