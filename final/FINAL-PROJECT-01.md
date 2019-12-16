@@ -2,7 +2,7 @@
 
 The instruction provide by [Aaron Hill](https://github.com/aaronxhill) can be found [here](https://github.com/visualizedata/data-structures/blob/master/final_assignment_1.md)
 
-#### Assumptions
+### Assumptions
 
 Some questions from the data to the end-user interface:
 
@@ -13,7 +13,7 @@ Some questions from the data to the end-user interface:
 
 *Please check my discussion of scalability and storytelling [here](https://github.com/yujunmjiang/data-structures-fall-19/blob/master/final/data-structures-final.pdf)*
 
-#### Data Parsing
+### Data Parsing
 
 The ten "Meeting List Agenda" pages for Manhattan are available at:  
 ```
