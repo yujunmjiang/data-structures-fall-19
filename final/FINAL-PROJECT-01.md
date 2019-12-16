@@ -55,6 +55,14 @@ Use the [`pg` module](https://node-postgres.com/) in Node to insert my AA data i
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week06/sample-1.png" width="50%"/>
 
+I have rewrote my query for AA data and used latitude, longitude, and zip code to group the data points.
+
+```javascript
+  var thisQuery = `SELECT lat, lng, zip, json_agg(json_build_object('loc', location_name, 'add', address, 'zip', zip, 'lat', lat, 'lng', lng)) as location, json_agg(json_build_object('day', day, 'begin', time_begin, 'end', time_end)) as schedule 
+    FROM meeting     
+    GROUP BY lat, lng, zip;`;
+```
+
 #### AA Meeting Map
 
 *Please check my map demo [here](http://34.228.80.227:8080/aaVis)*
