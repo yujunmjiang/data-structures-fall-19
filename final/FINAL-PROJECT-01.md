@@ -47,7 +47,7 @@ dotenv.config();
 const apiKey = process.env.TAMU_KEY;
 ```
 
-In the data structure modification, I rearranged the AA meeting's data into six categories: building name, location infomation, meeting title, time information, meeting type, and special interest. As the concept to make a design for a particular organization's needs, I was inspired by the idea of denormalized data. The data model should focus on four entities: location, time, meeting, and special interest. The foreign key (FK) gave an access between each table.
+Before building the data mode, I rearranged the AA meeting's data into six categories: building name, location infomation, meeting title, time information, meeting type, and special interest. Aiming with a design concept that caters to an organization's needs, I was inspired by the idea of denormalized data. Hence, the data model should focus on four entities: location, time, meeting, and special interest. The foreign key (FK) gave an access between each table
 
 <img src="https://github.com/yujunmjiang/data-structures-fall-19/blob/master/week04/data-model.png" width="50%"/>
 
